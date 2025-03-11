@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "eGgPGiycpUE=",
+  "dgSpecHash": "NAazY0Bo6K4=",
   "success": true,
   "projectFilePath": "C:\\project-full-Klimes\\Project-full\\Project-full\\Project-full.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\KlimesD\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\KlimesD\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
+    "C:\\Users\\KlimesD\\.nuget\\packages\\bootstrap\\5.3.3\\bootstrap.5.3.3.nupkg.sha512",
     "C:\\Users\\KlimesD\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\KlimesD\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\8.0.11\\microsoft.aspnetcore.cryptography.internal.8.0.11.nupkg.sha512",
     "C:\\Users\\KlimesD\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\8.0.11\\microsoft.aspnetcore.cryptography.keyderivation.8.0.11.nupkg.sha512",
