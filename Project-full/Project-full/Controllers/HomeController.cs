@@ -1,5 +1,6 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
+using Project_full.Data;
 using Project_full.Models;
 
 namespace Project_full.Controllers
@@ -7,18 +8,36 @@ namespace Project_full.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+		private readonly ApplicationDbContext _context;
 
-        public HomeController(ILogger<HomeController> logger)
+		public HomeController(ILogger<HomeController> logger, ApplicationDbContext context)
         {
             _logger = logger;
-        }
+			_context = context;
+		}
 
         public IActionResult Index()
         {
-            return View();
-        }
+			if (!_context.Pojisteni.Any())  // Kontrola, zda tabulka není prázdná
+			{
+				var pojisteniList = new List<Pojisteni>
+			{
+				new Pojisteni { Nazev = "Pojištìní zdraví", Cena = 1000 , PojistnaCastka=10000000},
+				new Pojisteni { Nazev = "Pojištìní auta", Cena = 5000, PojistnaCastka=5000000 },
+				new Pojisteni { Nazev = "Pojištìní domácnosti", Cena = 2000, PojistnaCastka=2000000 }
+			};
 
-        public IActionResult Privacy()
+				_context.Pojisteni.AddRange(pojisteniList);
+				_context.SaveChanges();
+			}
+
+			// Naèteme všechna pojištìní z databáze
+			var pojisteni = _context.Pojisteni.ToList();
+			return View(pojisteni);
+			// return View();
+		}
+
+        public IActionResult Nabidka()
         {
             return View();
         }

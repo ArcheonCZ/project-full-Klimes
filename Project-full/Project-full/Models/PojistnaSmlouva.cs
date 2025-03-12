@@ -11,20 +11,23 @@ namespace Project_full.Models
 		/// <summary>
 		/// Osoba, která pojištění sjednala a platí ho
 		/// </summary>
-		public Osoba Pojistnik { get; private set; }
+		public int PojistnikId { get; private set; }
 		/// <summary>
 		/// Osoba, která požívá výhod pojištění
 		/// </summary>
-		public Osoba Pojistenec { get; private set; }
+		public int PojistenecId { get; private set; }
 
 		/// <summary>
 		/// Datum, do kteréhj e pojištění uzavřeno
 		/// </summary>
+		 public int PojisteniId { get; private set; }
 		public DateTime Expirace { get; private set; }
 		/// <summary>
 		/// Seznam pojistných událostí, které byly hlášeny k sjednané pojistce
 		/// mělo by být spíše list objektů PojistnaUdalost, nikoliv stringu....
 		/// </summary>
+
+		/// Zde by se hodila vytvořit třída PojistnaUdalost a ne primitivní string, ale pro jednoduchost takto
 		public List<string> PojistnaUdalost { get; private set; } = new List<string>(); 
 
 	}

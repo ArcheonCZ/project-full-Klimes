@@ -2,29 +2,32 @@
 {
 	public class Osoba
 	{
+		/// <summary>
+		/// Primary key
+		/// </summary>
+		public int Id { get;  set; }
 
 		/// <summary>
 		/// Jméno pojištěnce
 		/// </summary>
-		public string Jmeno { get; private set; } = "";
+		public string Jmeno { get;  set; } = "";
 		/// <summary>
 		/// Příjmení pojištěnce
 		/// </summary>
-		public string Prijmeni { get; private set; } = "";
+		public string Prijmeni { get;  set; } = "";
 		/// <summary>
 		/// Věk pojištěnce
 		/// </summary>
-		public int Vek { get; private set; }
+		public int Vek { get;  set; }
 		/// <summary>
 		/// Telefonní číslo pojištěnce
 		/// </summary>
-		public string TelefonniCislo { get; private set; } = "";
-
+		public string TelefonniCislo { get;  set; } = "";
 
 		/// <summary>
 		/// 	Bonus (plusové hodnoty) / Malus (minusové hodnoty)
 		/// </summary>
-		public int Bonus { get; private set; }
+		public int Bonus { get;  set; }
 
 		/// <summary>
 		/// Pomocná metoda pro změnu skloňování slova roky/let dle věku

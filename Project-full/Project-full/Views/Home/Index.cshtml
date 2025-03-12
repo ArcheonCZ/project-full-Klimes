@@ -1,8 +1,34 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "PojiApp";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+@model List<Pojisteni>
+
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="utf-8" />
+    <title>Seznam pojištění</title>
+</head>
+<body>
+    <h1>Seznam pojištění</h1>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Název pojištění</th>
+                <th>Cena</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var pojisteni in Model)
+            {
+                <tr>
+                    <td>@pojisteni.Nazev</td>
+                    <td>@pojisteni.Cena</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
+</html>
