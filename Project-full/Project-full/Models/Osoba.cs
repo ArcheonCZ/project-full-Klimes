@@ -30,11 +30,15 @@
 		public int Bonus { get;  set; }
 
 		/// <summary>
+		/// Seznam uzavřených pojistných smluv
+		/// </summary>
+		public List<PojistnaSmlouva> SeznamPojisteni = new List<PojistnaSmlouva>();
+		/// <summary>
 		/// Pomocná metoda pro změnu skloňování slova roky/let dle věku
 		/// </summary>
 		/// <param name="Vek"></param>
 		/// <returns>vrací string s korektním skloňováním slova roky/let</returns>
-		/// 
+
 		public string KorektniSklonovaniVeku(int Vek)
 		{
 			string sklonovaniVeku = "";

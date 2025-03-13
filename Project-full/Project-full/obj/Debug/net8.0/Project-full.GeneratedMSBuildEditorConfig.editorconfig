@@ -1,11 +1,19 @@
 is_global = true
 build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
 build_property.TargetPlatformMinVersion = 
 build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
 build_property.ProjectTypeGuids = 
 build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
 build_property.PlatformNeutralAssembly = 
 build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Project_full
 build_property.RootNamespace = Project_full
@@ -24,12 +32,40 @@ build_property.EnableCodeStyleSeverity =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/project-full-Klimes/Project-full/Project-full/Views/Home/DetailPojisteni.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEZXRhaWxQb2ppc3RlbmkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/project-full-Klimes/Project-full/Project-full/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/project-full-Klimes/Project-full/Project-full/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/project-full-Klimes/Project-full/Project-full/Views/Home/SeznamPojisteni.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTZXpuYW1Qb2ppc3RlbmkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/project-full-Klimes/Project-full/Project-full/Views/Pojisteni/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9qaXN0ZW5pXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/project-full-Klimes/Project-full/Project-full/Views/Pojisteni/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9qaXN0ZW5pXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/project-full-Klimes/Project-full/Project-full/Views/Pojisteni/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9qaXN0ZW5pXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/project-full-Klimes/Project-full/Project-full/Views/Pojisteni/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9qaXN0ZW5pXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/project-full-Klimes/Project-full/Project-full/Views/Pojisteni/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9qaXN0ZW5pXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/project-full-Klimes/Project-full/Project-full/Views/Shared/Error.cshtml]

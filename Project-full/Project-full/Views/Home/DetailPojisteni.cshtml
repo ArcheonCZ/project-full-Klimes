@@ -1,0 +1,14 @@
+﻿@model Pojisteni
+
+<html lang="cs">
+<head>
+    <meta charset="utf-8" />
+    <title>Detail pojištění</title>
+</head>
+<body>
+    <h1>@Model.Nazev</h1>
+    <p>Cena: @Model.Cena</p>
+    <p>Pojistná Částka @Model.PojistnaCastka</p>
+    <a href="@Url.Action("SeznamPojisteni", "Home")">Zpět na seznam</a>
+</body>
+</html>

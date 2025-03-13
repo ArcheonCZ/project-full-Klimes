@@ -16,24 +16,14 @@ namespace Project_full.Data
 
 		protected override void OnModelCreating(ModelBuilder modelBuilder)
 		{
-			modelBuilder.Entity<Pojisteni>()
-	   .HasKey(p => p.Id);  // Pojisteni.Id je primární klíč
+
 
 			// Nastavení cizích klíčů a relací. funguje? nikdo neví...:D
-			modelBuilder.Entity<PojistnaSmlouva>()
-				.HasOne<Osoba>()
-				.WithOne()
-				.HasForeignKey<PojistnaSmlouva>(ps => ps.PojistnikId);
+			
 
-			modelBuilder.Entity<PojistnaSmlouva>()
-				.HasOne<Osoba>()
-				.WithOne()
-				.HasForeignKey<PojistnaSmlouva>(ps => ps.PojistenecId);
 
-			modelBuilder.Entity<PojistnaSmlouva>()
-				.HasOne<Pojisteni>()
-				.WithOne()
-				.HasForeignKey<PojistnaSmlouva>(ps => ps.PojisteniId);
+
+			base.OnModelCreating(modelBuilder);
 		}
 	}
 }

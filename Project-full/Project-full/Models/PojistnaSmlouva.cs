@@ -11,16 +11,20 @@ namespace Project_full.Models
 		/// <summary>
 		/// Osoba, která pojištění sjednala a platí ho
 		/// </summary>
-		public int PojistnikId { get; private set; }
+		//public int? PojistnikId { get; set; }
+		//public Osoba Pojistnik { get; set; }
+
 		/// <summary>
 		/// Osoba, která požívá výhod pojištění
 		/// </summary>
-		public int PojistenecId { get; private set; }
+		//public int? PojistenecId { get; set; }
+		//public Osoba Pojistenec { get; set; }
 
 		/// <summary>
 		/// Datum, do kteréhj e pojištění uzavřeno
 		/// </summary>
-		 public int PojisteniId { get; private set; }
+		public int? PojisteniId { get; set; }
+		//public Pojisteni Pojisteni { get; set; }
 		public DateTime Expirace { get; private set; }
 		/// <summary>
 		/// Seznam pojistných událostí, které byly hlášeny k sjednané pojistce
@@ -28,7 +32,7 @@ namespace Project_full.Models
 		/// </summary>
 
 		/// Zde by se hodila vytvořit třída PojistnaUdalost a ne primitivní string, ale pro jednoduchost takto
-		public List<string> PojistnaUdalost { get; private set; } = new List<string>(); 
+		public List<string> PojistnaUdalost { get; private set; } = new List<string>();
 
 	}
 }

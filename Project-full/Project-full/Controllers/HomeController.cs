@@ -17,6 +17,10 @@ namespace Project_full.Controllers
 		}
 
         public IActionResult Index()
+		{
+			return View();
+		}
+        public IActionResult SeznamPojisteni()
         {
 			if (!_context.Pojisteni.Any())  // Kontrola, zda tabulka není prázdná
 			{
@@ -34,15 +38,21 @@ namespace Project_full.Controllers
 			// Naèteme všechna pojištìní z databáze
 			var pojisteni = _context.Pojisteni.ToList();
 			return View(pojisteni);
-			// return View();
+			
 		}
 
-        public IActionResult Nabidka()
-        {
-            return View();
-        }
+		public IActionResult DetailPojisteni(int id)
+		{
+			var pojisteni = _context.Pojisteni.FirstOrDefault(p => p.Id == id);  // Naète detail pojištìní podle ID
+			if (pojisteni == null)
+			{
+				return NotFound();  // Pokud není pojištìní nalezeno, vrátí 404
+			}
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+			return View(pojisteni);
+		}
+
+		[ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
