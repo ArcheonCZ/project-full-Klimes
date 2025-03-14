@@ -17,7 +17,7 @@ namespace Project_full.Models
 		/// <summary>
 		/// Osoba, která požívá výhod pojištění
 		/// </summary>
-		//public int? PojistenecId { get; set; }
+		public int? PojistenecId { get; set; }
 		//public Osoba Pojistenec { get; set; }
 
 		/// <summary>
