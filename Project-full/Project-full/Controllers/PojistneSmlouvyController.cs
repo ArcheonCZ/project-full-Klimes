@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -13,11 +14,13 @@ namespace Project_full.Controllers
     public class PojistneSmlouvyController : Controller
     {
         private readonly ApplicationDbContext _context;
+		private readonly UserManager<Osoba> _userManager;
 
-        public PojistneSmlouvyController(ApplicationDbContext context)
+		public PojistneSmlouvyController(ApplicationDbContext context, UserManager<Osoba> userManager)
         {
             _context = context;
-        }
+			_userManager = userManager;
+		}
 
         // GET: PojistneSmlouvy
         public async Task<IActionResult> Index()
@@ -46,7 +49,11 @@ namespace Project_full.Controllers
         // GET: PojistneSmlouvy/Create
         public IActionResult Create()
         {
-            return View();
+            var pojisteniList = _context.Pojisteni.ToList();
+            var model = new SjednaniPojisteniViewModel();
+            ViewBag.PojisteniList = new SelectList(pojisteniList, "Id", "Nazev", "Cena");
+            ViewBag.PlatnostList = new SelectList(Enum.GetValues(typeof(DelkaPojisteni)));
+            return View(model);
         }
 
         // POST: PojistneSmlouvy/Create
@@ -54,15 +61,22 @@ namespace Project_full.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,PojistenecId,PojisteniId,Expirace,PojistnaUdalost")] PojistnaSmlouva pojistnaSmlouva)
+        public async Task<IActionResult> Create(SjednaniPojisteniViewModel model)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(pojistnaSmlouva);
+                var novaPojistnaSmlouva = new PojistnaSmlouva
+				{
+                    PojistenecId = _userManager.GetUserId(User),//osoba přihlášená
+					PojisteniId = model.PojisteniId,
+                    DelkaPojisteni = model.DelkaPojisteni,
+                    Expirace = DateTime.Now.AddDays((int)model.DelkaPojisteni)
+                };
+                _context.PojistneSmlouvy.Add(novaPojistnaSmlouva);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(pojistnaSmlouva);
+            return View(model);
         }
 
         // GET: PojistneSmlouvy/Edit/5

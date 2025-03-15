@@ -48,16 +48,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/project-full-Klimes/Project-full/Project-full/Views/Home/DetailPojisteni.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEZXRhaWxQb2ppc3RlbmkuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/project-full-Klimes/Project-full/Project-full/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/project-full-Klimes/Project-full/Project-full/Views/Home/SeznamPojisteni.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTZXpuYW1Qb2ppc3RlbmkuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/project-full-Klimes/Project-full/Project-full/Views/Pojisteni/Create.cshtml]

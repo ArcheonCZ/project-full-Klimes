@@ -1,12 +1,22 @@
 ﻿using Microsoft.AspNetCore.Http;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Project_full.Models
 {
+	public enum DelkaPojisteni
+	{
+		Měsíční = 30,
+		Čtvrtletní = 90,
+		Půlroční = 180,
+		Roční = 360
+	}
 	public class PojistnaSmlouva
 	{
 		/// <summary>
 		/// Unikátní identifikátor pojistné smlouvy
 		/// </summary>
+		[Key]
 		public int Id { get; private set; }
 		/// <summary>
 		/// Osoba, která pojištění sjednala a platí ho
@@ -17,15 +27,17 @@ namespace Project_full.Models
 		/// <summary>
 		/// Osoba, která požívá výhod pojištění
 		/// </summary>
-		public int? PojistenecId { get; set; }
-		//public Osoba Pojistenec { get; set; }
+		
+		public string? PojistenecId { get; set; }
+		public virtual Osoba Pojistenec { get; set; }
 
 		/// <summary>
-		/// Datum, do kteréhj e pojištění uzavřeno
+		/// Datum, do kterého je pojištění uzavřeno
 		/// </summary>
 		public int? PojisteniId { get; set; }
-		//public Pojisteni Pojisteni { get; set; }
-		public DateTime Expirace { get; private set; }
+		public virtual Pojisteni Pojisteni { get; set; }
+		public DelkaPojisteni DelkaPojisteni { get; set; }
+		public DateTime Expirace { get; set; }
 		/// <summary>
 		/// Seznam pojistných událostí, které byly hlášeny k sjednané pojistce
 		/// mělo by být spíše list objektů PojistnaUdalost, nikoliv stringu....

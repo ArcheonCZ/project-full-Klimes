@@ -6,9 +6,10 @@
 	@if (SignInManager.IsSignedIn(User))
 	{
 		<li class="nav-item">
-			<a class="nav-link text-primary" asp-area="Identity" asp-page="/Account/Manage/Index" asp-route-returnUrl="@Url.Action("Index", "PojistneSmlouvy", new { area = "" })">Osobní zóna</a>
+			<a class="nav-link text-primary" asp-controller="PojistneSmlouvy" asp-action="Index">Osobní zóna</a>
 		</li>
 		<li class="nav-item">
+
 			<a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hello @User.Identity?.Name!</a>
 		</li>
 		<li class="nav-item">

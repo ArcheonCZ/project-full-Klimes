@@ -1,16 +1,17 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.AspNetCore.Identity;
 
 namespace Project_full.Models
 
 {
-	public class Osoba
+	public class Osoba: IdentityUser
 	{
 		/// <summary>
 		/// Primary key
 		/// </summary>
-		[Key]
-		public int Id { get; set; }
+		//[Key]
+		//public string Id { get; set; }
 
 		/// <summary>
 		/// Jméno pojištěnce
@@ -25,6 +26,7 @@ namespace Project_full.Models
 		/// <summary>
 		/// Datum narození pojištěnce
 		/// </summary>
+		 [Required]
 		public DateTime DatumNarozeni { get; set; }
 		/// <summary>
 		/// Věk pojištěnce - automaticky dogenerovaný
@@ -46,6 +48,8 @@ namespace Project_full.Models
 		/// <summary>
 		/// Telefonní číslo pojištěnce
 		/// </summary>
+		 [Phone]
+		[Required]
 		public string TelefonniCislo { get; set; } = "";
 
 		/// <summary>
@@ -56,13 +60,13 @@ namespace Project_full.Models
 		/// <summary>
 		/// Cizí klíč na tabulku AspNetUsers
 		/// </summary>
-		[Required]
-		public string UserId { get; set; }
+		
+		//public string UserId { get; set; }
 
 		/// <summary>
 		/// Seznam uzavřených pojistných smluv
 		/// </summary>
-		public List<PojistnaSmlouva> SeznamPojisteni = new List<PojistnaSmlouva>();
+		public  List<PojistnaSmlouva> SeznamPojisteni = new List<PojistnaSmlouva>();
 
 
 		/// <summary>
