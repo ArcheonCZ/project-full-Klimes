@@ -1,7 +1,9 @@
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.EntityFrameworkCore;
 using Project_full.Data;
 using Project_full.Models;
+using Project_full.Utils;
 
 namespace Project_full
 {
@@ -17,12 +19,16 @@ namespace Project_full
                 options.UseSqlServer(connectionString));
             builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
-            //defaultní
-            //builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-            //    .AddEntityFrameworkStores<ApplicationDbContext>();
+			builder.Services.AddAuthentication();
+			builder.Services.AddAuthorization();
+			builder.Services.AddSingleton<IEmailSender, NullEmailSender>();
+			//defaultní
+			//builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+			//    .AddEntityFrameworkStores<ApplicationDbContext>();
 
-            builder.Services.AddIdentity<Osoba, IdentityRole>()
-                .AddEntityFrameworkStores<ApplicationDbContext>();
+			builder.Services.AddIdentity<Osoba, IdentityRole>()
+                .AddEntityFrameworkStores<ApplicationDbContext>()
+				.AddDefaultTokenProviders(); 
 
             builder.Services.AddControllersWithViews();
 			builder.Services.AddRazorPages();
@@ -46,9 +52,10 @@ namespace Project_full
 
             app.UseRouting();
 
-            app.UseAuthorization();
+			app.UseAuthentication();
+			app.UseAuthorization();
 
-            app.MapControllerRoute(
+			app.MapControllerRoute(
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");
             app.MapRazorPages();

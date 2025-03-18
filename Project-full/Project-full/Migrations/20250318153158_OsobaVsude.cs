@@ -5,7 +5,7 @@
 namespace Project_full.Migrations
 {
     /// <inheritdoc />
-    public partial class DedicnostOsobaIdentityUser : Migration
+    public partial class OsobaVsude : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

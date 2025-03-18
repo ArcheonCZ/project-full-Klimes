@@ -41,16 +41,16 @@ namespace Project_full.Controllers
 			
 		}
 
-		public IActionResult DetailPojisteni(int id)
-		{
-			var pojisteni = _context.Pojisteni.FirstOrDefault(p => p.Id == id);  // Naète detail pojištìní podle ID
-			if (pojisteni == null)
-			{
-				return NotFound();  // Pokud není pojištìní nalezeno, vrátí 404
-			}
+		//public IActionResult DetailPojisteni(int id)
+		//{
+		//	var pojisteni = _context.Pojisteni.FirstOrDefault(p => p.Id == id);  // Naète detail pojištìní podle ID
+		//	if (pojisteni == null)
+		//	{
+		//		return NotFound();  // Pokud není pojištìní nalezeno, vrátí 404
+		//	}
 
-			return View(pojisteni);
-		}
+		//	return View(pojisteni);
+		//}
 
 		[ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
