@@ -1,37 +1,43 @@
-﻿@model Project_full.Models.PojistnaSmlouva
+﻿@using System.Globalization
+@model Project_full.Models.PojistnaSmlouva
 
 @{
     ViewData["Title"] = "Edit";
 }
 
-<h1>Edit</h1>
+<h1>Prodloužení platnosti</h1>
 
 <h4>PojistnaSmlouva</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Edit">
+            @if (!ViewData.ModelState.IsValid)
+            {
+                <div class="alert alert-danger">
+                    <strong>Formulář obsahuje chyby! Opravit je a znovu odeslat formulář.</strong>
+                </div>
+            }
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Id" />
+          
             <div class="form-group">
-                <label asp-for="PojistenecId" class="control-label"></label>
-                <input asp-for="PojistenecId" class="form-control" />
-                <span asp-validation-for="PojistenecId" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="PojisteniId" class="control-label"></label>
-                <input asp-for="PojisteniId" class="form-control" />
+                <label asp-for="Pojisteni.Nazev" class="control-label"></label>
+                
                 <span asp-validation-for="PojisteniId" class="text-danger"></span>
             </div>
-            <div class="form-group">
+@*             <div class="form-group">
                 <label asp-for="Expirace" class="control-label"></label>
                 <input asp-for="Expirace" class="form-control" />
                 <span asp-validation-for="Expirace" class="text-danger"></span>
-            </div>
+            </div> *@
+            @Html.DisplayNameFor(model => model.Expirace)
+            @Model.Expirace.ToString("d", CultureInfo.CreateSpecificCulture("cs-CZ"))
             <div class="form-group">
-                <label asp-for="PojistnaUdalost" class="control-label"></label>
-                <input asp-for="PojistnaUdalost" class="form-control" />
-                <span asp-validation-for="PojistnaUdalost" class="text-danger"></span>
+                <label for="DelkaPojisteni">Vyberte platnost</label>
+                <select asp-for="DelkaPojisteni" class="form-control" asp-items="@ViewBag.PlatnostList">
+                    <option value="">--Vyberte platnost--</option>
+                </select>
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />

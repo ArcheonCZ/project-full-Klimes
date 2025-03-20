@@ -4,12 +4,12 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Project_full.Models
 {
-	public enum DelkaPojisteni
+	public enum DelkaPojisteniValues
 	{
 		Měsíční = 30,
 		Čtvrtletní = 90,
-		Půlroční = 180,
-		Roční = 360
+		Půlroční = 182,
+		Roční = 365
 	}
 	public class PojistnaSmlouva
 	{
@@ -34,9 +34,10 @@ namespace Project_full.Models
 		/// <summary>
 		/// Datum, do kterého je pojištění uzavřeno
 		/// </summary>
+		
 		public int? PojisteniId { get; set; }
 		public virtual Pojisteni Pojisteni { get; set; }
-		public DelkaPojisteni DelkaPojisteni { get; set; }
+		public DelkaPojisteniValues DelkaPojisteni { get; set; }
 		public DateTime Expirace { get; set; }
 		/// <summary>
 		/// Seznam pojistných událostí, které byly hlášeny k sjednané pojistce

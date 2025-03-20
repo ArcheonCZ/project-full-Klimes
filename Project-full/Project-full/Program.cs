@@ -17,12 +17,14 @@ namespace Project_full
             var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
             builder.Services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(connectionString));
+
+         //   builder.Services.AddDefaultIdentity<Osoba>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<ApplicationDbContext>();
             builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
-			builder.Services.AddAuthentication();
+			//builder.Services.AddAuthentication(); //přidá se automaticky
 			builder.Services.AddAuthorization();
 			builder.Services.AddSingleton<IEmailSender, NullEmailSender>();
-			//defaultn�
+			//defaultní
 			//builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
 			//    .AddEntityFrameworkStores<ApplicationDbContext>();
 

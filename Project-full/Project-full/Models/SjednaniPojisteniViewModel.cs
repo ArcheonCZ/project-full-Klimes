@@ -3,6 +3,6 @@
 	public class SjednaniPojisteniViewModel
 	{
 		public int PojisteniId { get; set; }
-		public DelkaPojisteni DelkaPojisteni { get; set; }
+		public DelkaPojisteniValues DelkaPojisteni { get; set; }
 	}
 }
