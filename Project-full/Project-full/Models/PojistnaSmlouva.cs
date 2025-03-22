@@ -17,7 +17,7 @@ namespace Project_full.Models
 		/// Unikátní identifikátor pojistné smlouvy
 		/// </summary>
 		[Key]
-		public int Id { get; private set; }
+		public int Id { get; set; }
 		/// <summary>
 		/// Osoba, která pojištění sjednala a platí ho
 		/// </summary>
@@ -29,6 +29,7 @@ namespace Project_full.Models
 		/// </summary>
 		
 		public string? PojistenecId { get; set; }
+		[ForeignKey("PojistenecId")]
 		public virtual Osoba Pojistenec { get; set; }
 
 		/// <summary>
@@ -36,6 +37,7 @@ namespace Project_full.Models
 		/// </summary>
 		
 		public int? PojisteniId { get; set; }
+		[ForeignKey("PojisteniId")]
 		public virtual Pojisteni Pojisteni { get; set; }
 		public DelkaPojisteniValues DelkaPojisteni { get; set; }
 		public DateTime Expirace { get; set; }

@@ -8684,23 +8684,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\KlimesD\\.nuget\\packages\\": {},
+    "C:\\Users\\dajab\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\project-full-Klimes\\Project-full\\Project-full\\Project-full.csproj",
+      "projectUniqueName": "C:\\Users\\dajab\\Desktop\\project\\project-full-Klimes\\Project-full\\Project-full\\Project-full.csproj",
       "projectName": "Project-full",
-      "projectPath": "C:\\project-full-Klimes\\Project-full\\Project-full\\Project-full.csproj",
-      "packagesPath": "C:\\Users\\KlimesD\\.nuget\\packages\\",
-      "outputPath": "C:\\project-full-Klimes\\Project-full\\Project-full\\obj\\",
+      "projectPath": "C:\\Users\\dajab\\Desktop\\project\\project-full-Klimes\\Project-full\\Project-full\\Project-full.csproj",
+      "packagesPath": "C:\\Users\\dajab\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\dajab\\Desktop\\project\\project-full-Klimes\\Project-full\\Project-full\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\KlimesD\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\dajab\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],

@@ -96,11 +96,15 @@ namespace Project_full.Controllers
 				return NotFound();
 			}
 			ViewBag.PlatnostList = new SelectList(Enum.GetValues(typeof(DelkaPojisteniValues)));
-			var pojistnaSmlouva = await _context.PojistneSmlouvy.FindAsync(id);
+			var pojistnaSmlouva = await _context.PojistneSmlouvy
+				.Include(ps => ps.Pojisteni)
+				.FirstOrDefaultAsync(ps => ps.Id == id);
+
 			if (pojistnaSmlouva == null)
 			{
 				return NotFound();
 			}
+			Console.WriteLine($"Edit: Id z URL: {id}, Id modelu: {pojistnaSmlouva.Id}");
 			return View(pojistnaSmlouva);
 		}
 
@@ -111,16 +115,27 @@ namespace Project_full.Controllers
 		[ValidateAntiForgeryToken]
 		public async Task<IActionResult> Edit(int id, [Bind("Id,DelkaPojisteni")] PojistnaSmlouva pojistnaSmlouva) //prodloužení
 		{
+			Console.WriteLine($"Edit/id: Id z URL: {id}, Id modelu: {pojistnaSmlouva.Id}");
+			Console.WriteLine($"Form values: {Request.Form.Count} items");
+			foreach (var key in Request.Form.Keys)
+			{
+				Console.WriteLine($"Key: {key}, Value: {Request.Form[key]}");
+			}
+			pojistnaSmlouva.Id = id;
+
+			Console.WriteLine($"Po explicitním nastavení: Id z URL: {id}, Id modelu: {pojistnaSmlouva.Id}");
+
 			if (id != pojistnaSmlouva.Id)
 			{
-				return NotFound();
+				//return NotFound();
+				return View("NotFound"); //not found 
 			}
 
 			if (ModelState.IsValid)
 			{
 				try
 				{
-					pojistnaSmlouva.Expirace = pojistnaSmlouva.Expirace.AddDays((int)pojistnaSmlouva.DelkaPojisteni);
+					//pojistnaSmlouva.Expirace = pojistnaSmlouva.Expirace.AddDays((int)pojistnaSmlouva.DelkaPojisteni);
 					_context.Update(pojistnaSmlouva);
 					await _context.SaveChangesAsync();
 				}
@@ -128,6 +143,7 @@ namespace Project_full.Controllers
 				{
 					if (!PojistnaSmlouvaExists(pojistnaSmlouva.Id))
 					{
+						//return View("NotFound");
 						return NotFound();
 					}
 					else

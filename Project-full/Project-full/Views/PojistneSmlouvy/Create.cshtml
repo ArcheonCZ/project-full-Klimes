@@ -1,7 +1,7 @@
 ﻿@model Project_full.Models.SjednaniPojisteniViewModel
 
 @{
-    ViewData["Title"] = "Create";
+	ViewData["Title"] = "Create";
 }
 
 <h1>Create</h1>
@@ -9,28 +9,28 @@
 <h4>PojistnaSmlouva</h4>
 <hr />
 <div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
-            <div class="form-group">
-                <label for="PojisteniId">Vyberte pojištění</label>
-                <select asp-for="PojisteniId" class="form-control" asp-items="@(ViewBag.PojisteniList)">
-                    <option value="">--Vyberte pojištění--</option>
-                </select>
-            </div>
+	<div class="col-md-4">
+		<form asp-action="Create">
+			<div class="form-group">
+				<label for="PojisteniId">Vyberte pojištění</label>
+				<select asp-for="PojisteniId" class="form-control" asp-items="@ViewBag.PojisteniList">
+					<option value="">--Vyberte pojištění--</option>
+				</select>
+			</div>
 
-            <div class="form-group">
-                <label for="Platnost">Vyberte platnost</label>
-                <select asp-for="DelkaPojisteni" class="form-control" asp-items="@ViewBag.PlatnostList">
-                    <option value="">--Vyberte platnost--</option>
-                </select>
-            </div>
+			<div class="form-group">
+				<label for="DelkaPojisteni">Vyberte platnost</label>
+				<select asp-for="DelkaPojisteni" class="form-control" asp-items="@ViewBag.PlatnostList">
+					<option value="">--Vyberte platnost--</option>
+				</select>
+			</div>
 
-            <button type="submit" class="btn btn-primary">Sjednat pojištění</button>
-        </form>
-    </div>
+			<button type="submit" class="btn btn-primary">Sjednat pojištění</button>
+		</form>
+	</div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+	<a asp-action="Index">Back to List</a>
 </div>
 

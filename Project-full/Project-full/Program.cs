@@ -40,8 +40,9 @@ namespace Project_full
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
             {
-                app.UseMigrationsEndPoint();
-            }
+                app.UseMigrationsEndPoint(); //zobrazení chyb v development módu
+				app.UseDeveloperExceptionPage();
+			}
             else
             {
                 app.UseExceptionHandler("/Home/Error");
