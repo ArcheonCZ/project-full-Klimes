@@ -13,7 +13,7 @@
 		<form asp-action="Create">
 			<div class="form-group">
 				<label for="PojisteniId">Vyberte pojištění</label>
-				<select asp-for="PojisteniId" class="form-control" asp-items="@ViewBag.PojisteniList">
+				<select asp-for="Id" class="form-control" asp-items="@ViewBag.PojisteniList">
 					<option value="">--Vyberte pojištění--</option>
 				</select>
 			</div>

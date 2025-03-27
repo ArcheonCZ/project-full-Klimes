@@ -77,7 +77,7 @@ namespace Project_full.Controllers
 				var novaPojistnaSmlouva = new PojistnaSmlouva
 				{
 					PojistenecId = _userManager.GetUserId(User),//osoba přihlášená
-					PojisteniId = model.PojisteniId,
+					PojisteniId = model.Id,
 					DelkaPojisteni = model.DelkaPojisteni,
 					Expirace = DateTime.Now.AddDays((int)model.DelkaPojisteni)
 				};
@@ -95,17 +95,29 @@ namespace Project_full.Controllers
 			{
 				return NotFound();
 			}
-			ViewBag.PlatnostList = new SelectList(Enum.GetValues(typeof(DelkaPojisteniValues)));
+			var platnostList = new SelectList(Enum.GetValues(typeof(DelkaPojisteniValues)));
+			ViewBag.PlatnostList = platnostList;
+			ViewData["DelkaPojisteni"] = platnostList.First().Value;
 			var pojistnaSmlouva = await _context.PojistneSmlouvy
 				.Include(ps => ps.Pojisteni)
 				.FirstOrDefaultAsync(ps => ps.Id == id);
+			//vytvoříme viewModel
+			var pojistnaSmlouvaVM = new SjednaniPojisteniViewModel
+			{
+				Id = pojistnaSmlouva.Id,
+				DelkaPojisteni = pojistnaSmlouva.DelkaPojisteni,
+				Nazev = pojistnaSmlouva.Pojisteni.Nazev,
+				Expirace = pojistnaSmlouva.Expirace
+			};
 
 			if (pojistnaSmlouva == null)
 			{
 				return NotFound();
 			}
-			Console.WriteLine($"Edit: Id z URL: {id}, Id modelu: {pojistnaSmlouva.Id}");
-			return View(pojistnaSmlouva);
+			//Console.WriteLine($"Edit: Id z URL: {id}, Id modelu: {pojistnaSmlouva.Id}");
+			Console.WriteLine("Id pojistné smlouvy: "+pojistnaSmlouvaVM.Id);
+			Console.WriteLine("Název pojistné smlouvy: "+pojistnaSmlouvaVM.Nazev);
+			return View(pojistnaSmlouvaVM);
 		}
 
 		// POST: PojistneSmlouvy/Edit/5
@@ -113,35 +125,31 @@ namespace Project_full.Controllers
 		// For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
 		[HttpPost]
 		[ValidateAntiForgeryToken]
-		public async Task<IActionResult> Edit(int id, [Bind("Id,DelkaPojisteni")] PojistnaSmlouva pojistnaSmlouva) //prodloužení
+		public async Task<IActionResult> Edit(int id, [Bind("Id,DelkaPojisteni")] SjednaniPojisteniViewModel model) //prodloužení
 		{
-			Console.WriteLine($"Edit/id: Id z URL: {id}, Id modelu: {pojistnaSmlouva.Id}");
-			Console.WriteLine($"Form values: {Request.Form.Count} items");
-			foreach (var key in Request.Form.Keys)
-			{
-				Console.WriteLine($"Key: {key}, Value: {Request.Form[key]}");
-			}
-			pojistnaSmlouva.Id = id;
-
-			Console.WriteLine($"Po explicitním nastavení: Id z URL: {id}, Id modelu: {pojistnaSmlouva.Id}");
-
-			if (id != pojistnaSmlouva.Id)
+			if (id != model.Id)
 			{
 				//return NotFound();
 				return View("NotFound"); //not found 
 			}
-
+			ModelState.Remove("Nazev");
 			if (ModelState.IsValid)
 			{
 				try
 				{
-					//pojistnaSmlouva.Expirace = pojistnaSmlouva.Expirace.AddDays((int)pojistnaSmlouva.DelkaPojisteni);
+					Console.WriteLine((int)model.DelkaPojisteni);
+					var pojistnaSmlouva = await _context.PojistneSmlouvy
+						.Include(ps => ps.Pojisteni)
+						.FirstOrDefaultAsync(ps => ps.Id == model.Id);
+					pojistnaSmlouva.DelkaPojisteni=model.DelkaPojisteni;
+					pojistnaSmlouva.Expirace = pojistnaSmlouva.Expirace.AddDays((int)pojistnaSmlouva.DelkaPojisteni);
+					Console.WriteLine(pojistnaSmlouva.Expirace);
 					_context.Update(pojistnaSmlouva);
 					await _context.SaveChangesAsync();
 				}
 				catch (DbUpdateConcurrencyException)
 				{
-					if (!PojistnaSmlouvaExists(pojistnaSmlouva.Id))
+					if (!PojistnaSmlouvaExists(model.Id))
 					{
 						//return View("NotFound");
 						return NotFound();
@@ -153,7 +161,21 @@ namespace Project_full.Controllers
 				}
 				return RedirectToAction(nameof(Index));
 			}
-			return View(pojistnaSmlouva);
+			else
+			{
+				foreach (var error in ModelState.Values.SelectMany(v => v.Errors))
+				{
+					// Tohle vypíše všechny chyby v konzoli (nebo logu)
+					Console.WriteLine(error.ErrorMessage);
+				}
+
+				// Zobrazení formuláře s chybami
+				Console.WriteLine("Jdu na index");
+				return View(model);
+				//return View(nameof(Index));
+			}
+
+
 		}
 
 		// GET: PojistneSmlouvy/Delete/5

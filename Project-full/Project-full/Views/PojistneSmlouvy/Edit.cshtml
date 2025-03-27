@@ -1,5 +1,5 @@
 ﻿@using System.Globalization
-@model Project_full.Models.PojistnaSmlouva
+@model Project_full.Models.SjednaniPojisteniViewModel
 
 @{
 	ViewData["Title"] = "Edit";
@@ -12,21 +12,22 @@
 <div class="row">
 	<div class="col-md-4">
 		<form asp-action="Edit">
+			
 			@if (!ViewData.ModelState.IsValid)
 			{
-								<div class="alert alert-danger">
-									<strong>Formulář obsahuje chyby! Opravit je a znovu odeslat formulář.</strong>
-								</div>
+				<div class="alert alert-danger">
+					<strong>Formulář obsahuje chyby! Opravit je a znovu odeslat formulář.</strong>
+				</div>
 			}
 			<div asp-validation-summary="ModelOnly" class="text-danger"></div>
 			<input type="hidden" asp-for="Id" id="idField" />
-<script>
-	console.log("ID pole hodnota: " + document.getElementById("idField").value);
-</script>
+			@* <script>
+			console.log("ID pole hodnota: " + document.getElementById("idField").value);
+			</script> *@
 
 			<div class="form-group">
-				<label asp-for="Pojisteni.Nazev" class="control-label"></label>
-				<span> @Model.Pojisteni.Nazev </span>
+				<label asp-for="Nazev" class="control-label"></label>
+				<span> @Model.Nazev </span>
 			</div>
 
 			@Html.DisplayNameFor(model => model.Expirace)
@@ -37,8 +38,8 @@
 					<option value="">--Vyberte platnost--</option>
 				</select>
 			</div>
-				
-				<!-- Pro debugging -->
+
+			<!-- Pro debugging -->
 			<p>ID smlouvy: @Model.Id</p>
 			<div class="form-group">
 				<input type="submit" value="Prodloužit" class="btn btn-primary" />
