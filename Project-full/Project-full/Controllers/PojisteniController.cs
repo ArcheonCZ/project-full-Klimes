@@ -142,13 +142,24 @@ namespace Project_full.Controllers
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var pojisteni = await _context.Pojisteni.FindAsync(id);
-            if (pojisteni != null)
-            {
-                _context.Pojisteni.Remove(pojisteni);
-            }
+			if (pojisteni == null)
+			{
+				return View("NotFound");
+			}
+			try
+			{
+				_context.Pojisteni.Remove(pojisteni);
+				await _context.SaveChangesAsync();
 
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+			}
+
+			catch (DbUpdateException ex)
+			{
+				Console.WriteLine("Chyba při mazání: " + ex.Message);
+				TempData["ErrorMessage"] = "Nelze smazat pojištění, protože na něj existují sjednané pojistné smlouvy.";
+				Console.WriteLine("zachycena žádaná -chybová- hláška při mazání");
+			}
+			return RedirectToAction(nameof(Index));
         }
 
         private bool PojisteniExists(int id)

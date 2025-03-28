@@ -25,7 +25,7 @@ namespace Project_full.Controllers
 
 			var pojisteniList = _context.Pojisteni.ToList();
 			pojisteniSelectList = new SelectList(pojisteniList, "Id", "Nazev", "Cena");
-			 delkaPojisteniSelectList = new SelectList(Enum.GetValues(typeof(DelkaPojisteniValues)));
+			delkaPojisteniSelectList = new SelectList(Enum.GetValues(typeof(DelkaPojisteniValues)));
 		}
 
 		// GET: PojistneSmlouvy
@@ -34,7 +34,7 @@ namespace Project_full.Controllers
 			var pojistneSmlouvy = await _context.PojistneSmlouvy
 		 .Include(ps => ps.Pojistenec)  // Načítáme související osobu (pojištěného)
 		.Include(ps => ps.Pojisteni)   // Načítáme související pojištění
-		 .Where(ps=> ps.PojistenecId == _userManager.GetUserId(User))  //osoba přihlášená)
+		 .Where(ps => ps.PojistenecId == _userManager.GetUserId(User))  //osoba přihlášená)
 		.ToListAsync();
 
 			return View(pojistneSmlouvy);
@@ -64,8 +64,12 @@ namespace Project_full.Controllers
 		// GET: PojistneSmlouvy/Create
 		public IActionResult Create()
 		{
-			
-			var model = new SjednaniPojisteniViewModel();
+
+			var model = new SjednaniPojisteniViewModel
+			{
+				PojisteniOptions = pojisteniSelectList,
+				DelkaPojisteniOptions = delkaPojisteniSelectList
+			};
 			//ViewBag.PojisteniList = new SelectList(pojisteniList, "Id", "Nazev", "Cena");
 			//ViewBag.PlatnostList = new SelectList(Enum.GetValues(typeof(DelkaPojisteniValues)));
 			return View(model);
@@ -110,19 +114,21 @@ namespace Project_full.Controllers
 			{
 				return NotFound();
 			}
-			var platnostList = new SelectList(Enum.GetValues(typeof(DelkaPojisteniValues)));
-			ViewBag.PlatnostList = platnostList;
-			ViewData["DelkaPojisteni"] = platnostList.First().Value;
+			//var platnostList = new SelectList(Enum.GetValues(typeof(DelkaPojisteniValues)));
+			//ViewBag.PlatnostList = platnostList;
+			//ViewData["DelkaPojisteni"] = platnostList.First().Value; //uplna blbost, asi to melo delat, aby se tam zobrazila prvni hodnota, ale stejne to nefunguje
 			var pojistnaSmlouva = await _context.PojistneSmlouvy
 				.Include(ps => ps.Pojisteni)
 				.FirstOrDefaultAsync(ps => ps.Id == id);
 			//vytvoříme viewModel
 			var pojistnaSmlouvaVM = new SjednaniPojisteniViewModel
 			{
-				PojisteniId = pojistnaSmlouva.Id,
+				PojistnaSmlouvaId = pojistnaSmlouva.Id,
 				DelkaPojisteni = pojistnaSmlouva.DelkaPojisteni,
 				Nazev = pojistnaSmlouva.Pojisteni.Nazev,
-				Expirace = pojistnaSmlouva.Expirace
+				Expirace = pojistnaSmlouva.Expirace,
+				PojisteniOptions = pojisteniSelectList,
+				DelkaPojisteniOptions = delkaPojisteniSelectList
 			};
 
 			if (pojistnaSmlouva == null)
@@ -130,7 +136,8 @@ namespace Project_full.Controllers
 				return NotFound();
 			}
 			//Console.WriteLine($"Edit: Id z URL: {id}, Id modelu: {pojistnaSmlouva.Id}");
-			Console.WriteLine("Id pojistné smlouvy: " + pojistnaSmlouvaVM.PojisteniId);
+			Console.WriteLine("Id pojistné smlouvy VM: " + pojistnaSmlouvaVM.PojistnaSmlouvaId);
+			Console.WriteLine("Id pojistné smlouvy model: " + pojistnaSmlouva.Id);
 			Console.WriteLine("Název pojistné smlouvy: " + pojistnaSmlouvaVM.Nazev);
 			return View(pojistnaSmlouvaVM);
 		}
@@ -140,10 +147,12 @@ namespace Project_full.Controllers
 		// For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
 		[HttpPost]
 		[ValidateAntiForgeryToken]
-		public async Task<IActionResult> Edit(int id, [Bind("Id,DelkaPojisteni")] SjednaniPojisteniViewModel model) //prodloužení
+		public async Task<IActionResult> Edit(int id, [Bind("PojistnaSmlouvaId,DelkaPojisteni")] SjednaniPojisteniViewModel model) //prodloužení
 		{
-			if (id != model.PojisteniId)
+			if (id != model.PojistnaSmlouvaId)
 			{
+				Console.WriteLine("Id pojistné smlouvy -edit: " + id);
+				Console.WriteLine("Id pojistné smlouvy VM: " + model.PojistnaSmlouvaId);
 				//return NotFound();
 				return View("NotFound"); //not found 
 			}
@@ -155,7 +164,7 @@ namespace Project_full.Controllers
 					Console.WriteLine((int)model.DelkaPojisteni);
 					var pojistnaSmlouva = await _context.PojistneSmlouvy
 						.Include(ps => ps.Pojisteni)
-						.FirstOrDefaultAsync(ps => ps.Id == model.PojisteniId);
+						.FirstOrDefaultAsync(ps => ps.Id == model.PojistnaSmlouvaId);
 					pojistnaSmlouva.DelkaPojisteni = model.DelkaPojisteni;
 					pojistnaSmlouva.Expirace = pojistnaSmlouva.Expirace.AddDays((int)pojistnaSmlouva.DelkaPojisteni);
 					Console.WriteLine(pojistnaSmlouva.Expirace);
@@ -164,7 +173,7 @@ namespace Project_full.Controllers
 				}
 				catch (DbUpdateConcurrencyException)
 				{
-					if (!PojistnaSmlouvaExists(model.PojisteniId))
+					if (!PojistnaSmlouvaExists(model.PojistnaSmlouvaId))
 					{
 						//return View("NotFound");
 						return NotFound();
@@ -218,12 +227,25 @@ namespace Project_full.Controllers
 		public async Task<IActionResult> DeleteConfirmed(int id)
 		{
 			var pojistnaSmlouva = await _context.PojistneSmlouvy.FindAsync(id);
-			if (pojistnaSmlouva != null)
+			if (pojistnaSmlouva == null)
+			{
+				return View("NotFound");
+			}
+			try
 			{
 				_context.PojistneSmlouvy.Remove(pojistnaSmlouva);
+				await _context.SaveChangesAsync();
+
 			}
 
-			await _context.SaveChangesAsync();
+			catch (DbUpdateException ex)
+			{
+				Console.WriteLine("Chyba při mazání: " + ex.Message);
+				//TempData["ErrorMessage"] = "Nelze smazat pojištění, protože na něj existují sjednané pojistné smlouvy.";
+				Console.WriteLine("zachycena žádaná -chybová- hláška při mazání pojistne smlouvy");
+			}
+
+
 			return RedirectToAction(nameof(Index));
 		}
 
