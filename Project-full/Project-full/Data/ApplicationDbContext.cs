@@ -30,7 +30,7 @@ namespace Project_full.Data
 				.HasOne(p => p.Pojisteni)   // PojistnaSmlouva má jedno Pojisteni
 				.WithMany()                  // Pojisteni může mít více PojistnychSmluv
 				.HasForeignKey(p => p.PojisteniId)  // Cizí klíč je PojisteniId
-				.OnDelete(DeleteBehavior.SetNull); // při smazání Pojisteni se záznam v PojistnaSmlouva nastavi na null
+				.OnDelete(DeleteBehavior.Restrict); // při smazání Pojisteni se záznam v PojistnaSmlouva nastavi na null
 
 
 

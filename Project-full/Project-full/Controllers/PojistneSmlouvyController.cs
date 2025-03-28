@@ -16,11 +16,16 @@ namespace Project_full.Controllers
 	{
 		private readonly ApplicationDbContext _context;
 		private readonly UserManager<Osoba> _userManager;
-
+		private readonly SelectList pojisteniSelectList;
+		private readonly SelectList delkaPojisteniSelectList;
 		public PojistneSmlouvyController(ApplicationDbContext context, UserManager<Osoba> userManager)
 		{
 			_context = context;
 			_userManager = userManager;
+
+			var pojisteniList = _context.Pojisteni.ToList();
+			pojisteniSelectList = new SelectList(pojisteniList, "Id", "Nazev", "Cena");
+			 delkaPojisteniSelectList = new SelectList(Enum.GetValues(typeof(DelkaPojisteniValues)));
 		}
 
 		// GET: PojistneSmlouvy
@@ -59,10 +64,10 @@ namespace Project_full.Controllers
 		// GET: PojistneSmlouvy/Create
 		public IActionResult Create()
 		{
-			var pojisteniList = _context.Pojisteni.ToList();
+			
 			var model = new SjednaniPojisteniViewModel();
-			ViewBag.PojisteniList = new SelectList(pojisteniList, "Id", "Nazev", "Cena");
-			ViewBag.PlatnostList = new SelectList(Enum.GetValues(typeof(DelkaPojisteniValues)));
+			//ViewBag.PojisteniList = new SelectList(pojisteniList, "Id", "Nazev", "Cena");
+			//ViewBag.PlatnostList = new SelectList(Enum.GetValues(typeof(DelkaPojisteniValues)));
 			return View(model);
 		}
 
@@ -73,12 +78,13 @@ namespace Project_full.Controllers
 		[ValidateAntiForgeryToken]
 		public async Task<IActionResult> Create(SjednaniPojisteniViewModel model)
 		{
+			ModelState.Remove("Nazev"); //model state mi nevaliduje pole Nazev, protoze ho pro vytvoreni pojisteni nepotrebuju
 			if (ModelState.IsValid)
 			{
 				var novaPojistnaSmlouva = new PojistnaSmlouva
 				{
 					PojistenecId = _userManager.GetUserId(User),//osoba přihlášená
-					PojisteniId = model.Id,
+					PojisteniId = model.PojisteniId,
 					DelkaPojisteni = model.DelkaPojisteni,
 					Expirace = DateTime.Now.AddDays((int)model.DelkaPojisteni)
 				};
@@ -86,7 +92,15 @@ namespace Project_full.Controllers
 				await _context.SaveChangesAsync();
 				return RedirectToAction(nameof(Index));
 			}
-			return View(model);
+			else
+			{
+				foreach (var error in ModelState.Values.SelectMany(v => v.Errors))
+				{
+					// Tohle vypíše všechny chyby v konzoli 
+					Console.WriteLine(error.ErrorMessage);
+				}
+				return View(model);
+			}
 		}
 
 		// GET: PojistneSmlouvy/Edit/5
@@ -105,7 +119,7 @@ namespace Project_full.Controllers
 			//vytvoříme viewModel
 			var pojistnaSmlouvaVM = new SjednaniPojisteniViewModel
 			{
-				Id = pojistnaSmlouva.Id,
+				PojisteniId = pojistnaSmlouva.Id,
 				DelkaPojisteni = pojistnaSmlouva.DelkaPojisteni,
 				Nazev = pojistnaSmlouva.Pojisteni.Nazev,
 				Expirace = pojistnaSmlouva.Expirace
@@ -116,7 +130,7 @@ namespace Project_full.Controllers
 				return NotFound();
 			}
 			//Console.WriteLine($"Edit: Id z URL: {id}, Id modelu: {pojistnaSmlouva.Id}");
-			Console.WriteLine("Id pojistné smlouvy: " + pojistnaSmlouvaVM.Id);
+			Console.WriteLine("Id pojistné smlouvy: " + pojistnaSmlouvaVM.PojisteniId);
 			Console.WriteLine("Název pojistné smlouvy: " + pojistnaSmlouvaVM.Nazev);
 			return View(pojistnaSmlouvaVM);
 		}
@@ -128,7 +142,7 @@ namespace Project_full.Controllers
 		[ValidateAntiForgeryToken]
 		public async Task<IActionResult> Edit(int id, [Bind("Id,DelkaPojisteni")] SjednaniPojisteniViewModel model) //prodloužení
 		{
-			if (id != model.Id)
+			if (id != model.PojisteniId)
 			{
 				//return NotFound();
 				return View("NotFound"); //not found 
@@ -141,7 +155,7 @@ namespace Project_full.Controllers
 					Console.WriteLine((int)model.DelkaPojisteni);
 					var pojistnaSmlouva = await _context.PojistneSmlouvy
 						.Include(ps => ps.Pojisteni)
-						.FirstOrDefaultAsync(ps => ps.Id == model.Id);
+						.FirstOrDefaultAsync(ps => ps.Id == model.PojisteniId);
 					pojistnaSmlouva.DelkaPojisteni = model.DelkaPojisteni;
 					pojistnaSmlouva.Expirace = pojistnaSmlouva.Expirace.AddDays((int)pojistnaSmlouva.DelkaPojisteni);
 					Console.WriteLine(pojistnaSmlouva.Expirace);
@@ -150,7 +164,7 @@ namespace Project_full.Controllers
 				}
 				catch (DbUpdateConcurrencyException)
 				{
-					if (!PojistnaSmlouvaExists(model.Id))
+					if (!PojistnaSmlouvaExists(model.PojisteniId))
 					{
 						//return View("NotFound");
 						return NotFound();

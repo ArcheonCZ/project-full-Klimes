@@ -7,54 +7,19 @@
       "RelativeMoniker": "D:0:0:{C1887D59-4E25-4954-9EE0-1170ED2F5674}|Project-full\\Project-full.csproj|solutionrelative:project-full\\controllers\\pojistnesmlouvycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/aspnet_Project_full_170c87f0_223c_4a87_b727_fcd072c9e647/True/SqlTable/dbo.PojistneSmlouvy.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/aspnet_Project_full_170c87f0_223c_4a87_b727_fcd072c9e647/True/SqlTable/dbo.AspNetUsers.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C1887D59-4E25-4954-9EE0-1170ED2F5674}|Project-full\\Project-full.csproj|c:\\users\\dajab\\desktop\\project\\project-full-klimes\\project-full\\project-full\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C1887D59-4E25-4954-9EE0-1170ED2F5674}|Project-full\\Project-full.csproj|solutionrelative:project-full\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C1887D59-4E25-4954-9EE0-1170ED2F5674}|Project-full\\Project-full.csproj|c:\\users\\dajab\\desktop\\project\\project-full-klimes\\project-full\\project-full\\areas\\identity\\pages\\account\\logout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C1887D59-4E25-4954-9EE0-1170ED2F5674}|Project-full\\Project-full.csproj|solutionrelative:project-full\\areas\\identity\\pages\\account\\logout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C1887D59-4E25-4954-9EE0-1170ED2F5674}|Project-full\\Project-full.csproj|c:\\users\\dajab\\desktop\\project\\project-full-klimes\\project-full\\project-full\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C1887D59-4E25-4954-9EE0-1170ED2F5674}|Project-full\\Project-full.csproj|solutionrelative:project-full\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{C1887D59-4E25-4954-9EE0-1170ED2F5674}|Project-full\\Project-full.csproj|c:\\users\\dajab\\desktop\\project\\project-full-klimes\\project-full\\project-full\\models\\sjednanipojisteniviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C1887D59-4E25-4954-9EE0-1170ED2F5674}|Project-full\\Project-full.csproj|solutionrelative:project-full\\models\\sjednanipojisteniviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C1887D59-4E25-4954-9EE0-1170ED2F5674}|Project-full\\Project-full.csproj|c:\\users\\dajab\\desktop\\project\\project-full-klimes\\project-full\\project-full\\models\\pojistnasmlouva.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C1887D59-4E25-4954-9EE0-1170ED2F5674}|Project-full\\Project-full.csproj|solutionrelative:project-full\\models\\pojistnasmlouva.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C1887D59-4E25-4954-9EE0-1170ED2F5674}|Project-full\\Project-full.csproj|c:\\users\\dajab\\desktop\\project\\project-full-klimes\\project-full\\project-full\\views\\pojistnesmlouvy\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C1887D59-4E25-4954-9EE0-1170ED2F5674}|Project-full\\Project-full.csproj|solutionrelative:project-full\\views\\pojistnesmlouvy\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C1887D59-4E25-4954-9EE0-1170ED2F5674}|Project-full\\Project-full.csproj|c:\\users\\dajab\\desktop\\project\\project-full-klimes\\project-full\\project-full\\views\\pojistnesmlouvy\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C1887D59-4E25-4954-9EE0-1170ED2F5674}|Project-full\\Project-full.csproj|solutionrelative:project-full\\views\\pojistnesmlouvy\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C1887D59-4E25-4954-9EE0-1170ED2F5674}|Project-full\\Project-full.csproj|c:\\users\\dajab\\desktop\\project\\project-full-klimes\\project-full\\project-full\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C1887D59-4E25-4954-9EE0-1170ED2F5674}|Project-full\\Project-full.csproj|solutionrelative:project-full\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C1887D59-4E25-4954-9EE0-1170ED2F5674}|Project-full\\Project-full.csproj|c:\\users\\dajab\\desktop\\project\\project-full-klimes\\project-full\\project-full\\views\\shared\\notfound.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C1887D59-4E25-4954-9EE0-1170ED2F5674}|Project-full\\Project-full.csproj|solutionrelative:project-full\\views\\shared\\notfound.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{C1887D59-4E25-4954-9EE0-1170ED2F5674}|Project-full\\Project-full.csproj|c:\\users\\dajab\\desktop\\project\\project-full-klimes\\project-full\\project-full\\controllers\\pojistenicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1887D59-4E25-4954-9EE0-1170ED2F5674}|Project-full\\Project-full.csproj|solutionrelative:project-full\\controllers\\pojistenicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C1887D59-4E25-4954-9EE0-1170ED2F5674}|Project-full\\Project-full.csproj|c:\\users\\dajab\\desktop\\project\\project-full-klimes\\project-full\\project-full\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{C1887D59-4E25-4954-9EE0-1170ED2F5674}|Project-full\\Project-full.csproj|solutionrelative:project-full\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C1887D59-4E25-4954-9EE0-1170ED2F5674}|Project-full\\Project-full.csproj|c:\\users\\dajab\\desktop\\project\\project-full-klimes\\project-full\\project-full\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{C1887D59-4E25-4954-9EE0-1170ED2F5674}|Project-full\\Project-full.csproj|solutionrelative:project-full\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/aspnet_Project_full_170c87f0_223c_4a87_b727_fcd072c9e647/True/SqlTable/dbo.PojistneSmlouvy.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
     }
   ],
   "DocumentGroupContainers": [
@@ -63,27 +28,20 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 85,
-          "SelectedChildIndex": 2,
+          "DockedWidth": 110,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "dbo.AspNetUsers [Data]",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/aspnet_Project_full_170c87f0_223c_4a87_b727_fcd072c9e647/True/SqlTable/dbo.AspNetUsers.sql",
-              "ToolTip": "dbo.AspNetUsers [Data]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-03-28T07:42:11.831Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "dbo.PojistneSmlouvy [Data]",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/aspnet_Project_full_170c87f0_223c_4a87_b727_fcd072c9e647/True/SqlTable/dbo.PojistneSmlouvy.sql",
-              "ToolTip": "dbo.PojistneSmlouvy [Data]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-03-28T07:41:56.973Z",
+              "Title": "SjednaniPojisteniViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\dajab\\Desktop\\project\\project-full-Klimes\\Project-full\\Project-full\\Models\\SjednaniPojisteniViewModel.cs",
+              "RelativeDocumentMoniker": "Project-full\\Models\\SjednaniPojisteniViewModel.cs",
+              "ToolTip": "C:\\Users\\dajab\\Desktop\\project\\project-full-Klimes\\Project-full\\Project-full\\Models\\SjednaniPojisteniViewModel.cs",
+              "RelativeToolTip": "Project-full\\Models\\SjednaniPojisteniViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T08:13:00.133Z",
               "EditorCaption": ""
             },
             {
@@ -94,145 +52,46 @@
               "RelativeDocumentMoniker": "Project-full\\Controllers\\PojistneSmlouvyController.cs",
               "ToolTip": "C:\\Users\\dajab\\Desktop\\project\\project-full-Klimes\\Project-full\\Project-full\\Controllers\\PojistneSmlouvyController.cs",
               "RelativeToolTip": "Project-full\\Controllers\\PojistneSmlouvyController.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAIwB8AAAA/AAAAAAAAAA==",
+              "ViewState": "AgIAADoAAAAAAAAAAAApwEsAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T13:05:38.271Z",
+              "WhenOpened": "2025-03-28T08:08:03.915Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\dajab\\Desktop\\project\\project-full-Klimes\\Project-full\\Project-full\\Views\\PojistneSmlouvy\\Create.cshtml",
-              "RelativeDocumentMoniker": "Project-full\\Views\\PojistneSmlouvy\\Create.cshtml",
-              "ToolTip": "C:\\Users\\dajab\\Desktop\\project\\project-full-Klimes\\Project-full\\Project-full\\Views\\PojistneSmlouvy\\Create.cshtml",
-              "RelativeToolTip": "Project-full\\Views\\PojistneSmlouvy\\Create.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-22T14:48:59.65Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "PojistnaSmlouva.cs",
-              "DocumentMoniker": "C:\\Users\\dajab\\Desktop\\project\\project-full-Klimes\\Project-full\\Project-full\\Models\\PojistnaSmlouva.cs",
-              "RelativeDocumentMoniker": "Project-full\\Models\\PojistnaSmlouva.cs",
-              "ToolTip": "C:\\Users\\dajab\\Desktop\\project\\project-full-Klimes\\Project-full\\Project-full\\Models\\PojistnaSmlouva.cs",
-              "RelativeToolTip": "Project-full\\Models\\PojistnaSmlouva.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-22T14:48:24.846Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Users\\dajab\\Desktop\\project\\project-full-Klimes\\Project-full\\Project-full\\Views\\PojistneSmlouvy\\Edit.cshtml",
-              "RelativeDocumentMoniker": "Project-full\\Views\\PojistneSmlouvy\\Edit.cshtml",
-              "ToolTip": "C:\\Users\\dajab\\Desktop\\project\\project-full-Klimes\\Project-full\\Project-full\\Views\\PojistneSmlouvy\\Edit.cshtml",
-              "RelativeToolTip": "Project-full\\Views\\PojistneSmlouvy\\Edit.cshtml",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAAC8AAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-20T13:23:54.617Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\dajab\\Desktop\\project\\project-full-Klimes\\Project-full\\Project-full\\Program.cs",
-              "RelativeDocumentMoniker": "Project-full\\Program.cs",
-              "ToolTip": "C:\\Users\\dajab\\Desktop\\project\\project-full-Klimes\\Project-full\\Project-full\\Program.cs",
-              "RelativeToolTip": "Project-full\\Program.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAewBQAAACkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-22T13:13:13.924Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "SjednaniPojisteniViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\dajab\\Desktop\\project\\project-full-Klimes\\Project-full\\Project-full\\Models\\SjednaniPojisteniViewModel.cs",
-              "RelativeDocumentMoniker": "Project-full\\Models\\SjednaniPojisteniViewModel.cs",
-              "ToolTip": "C:\\Users\\dajab\\Desktop\\project\\project-full-Klimes\\Project-full\\Project-full\\Models\\SjednaniPojisteniViewModel.cs",
-              "RelativeToolTip": "Project-full\\Models\\SjednaniPojisteniViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-27T13:55:43.536Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Logout.cshtml",
-              "DocumentMoniker": "C:\\Users\\dajab\\Desktop\\project\\project-full-Klimes\\Project-full\\Project-full\\Areas\\Identity\\Pages\\Account\\Logout.cshtml",
-              "RelativeDocumentMoniker": "Project-full\\Areas\\Identity\\Pages\\Account\\Logout.cshtml",
-              "ToolTip": "C:\\Users\\dajab\\Desktop\\project\\project-full-Klimes\\Project-full\\Project-full\\Areas\\Identity\\Pages\\Account\\Logout.cshtml",
-              "RelativeToolTip": "Project-full\\Areas\\Identity\\Pages\\Account\\Logout.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-28T07:21:38.454Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 2,
               "Title": "ApplicationDbContext.cs",
               "DocumentMoniker": "C:\\Users\\dajab\\Desktop\\project\\project-full-Klimes\\Project-full\\Project-full\\Data\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "Project-full\\Data\\ApplicationDbContext.cs",
               "ToolTip": "C:\\Users\\dajab\\Desktop\\project\\project-full-Klimes\\Project-full\\Project-full\\Data\\ApplicationDbContext.cs",
               "RelativeToolTip": "Project-full\\Data\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAA1wCAAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-22T16:00:04.574Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "_LoginPartial.cshtml",
-              "DocumentMoniker": "C:\\Users\\dajab\\Desktop\\project\\project-full-Klimes\\Project-full\\Project-full\\Views\\Shared\\_LoginPartial.cshtml",
-              "RelativeDocumentMoniker": "Project-full\\Views\\Shared\\_LoginPartial.cshtml",
-              "ToolTip": "C:\\Users\\dajab\\Desktop\\project\\project-full-Klimes\\Project-full\\Project-full\\Views\\Shared\\_LoginPartial.cshtml",
-              "RelativeToolTip": "Project-full\\Views\\Shared\\_LoginPartial.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-28T07:20:19.846Z",
+              "WhenOpened": "2025-03-28T08:04:01.9Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "NotFound.cshtml",
-              "DocumentMoniker": "C:\\Users\\dajab\\Desktop\\project\\project-full-Klimes\\Project-full\\Project-full\\Views\\Shared\\NotFound.cshtml",
-              "RelativeDocumentMoniker": "Project-full\\Views\\Shared\\NotFound.cshtml",
-              "ToolTip": "C:\\Users\\dajab\\Desktop\\project\\project-full-Klimes\\Project-full\\Project-full\\Views\\Shared\\NotFound.cshtml",
-              "RelativeToolTip": "Project-full\\Views\\Shared\\NotFound.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAABBAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-22T15:18:45.884Z"
+              "DocumentIndex": 4,
+              "Title": "dbo.PojistneSmlouvy [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/aspnet_Project_full_170c87f0_223c_4a87_b727_fcd072c9e647/True/SqlTable/dbo.PojistneSmlouvy.sql",
+              "ToolTip": "dbo.PojistneSmlouvy [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-03-28T08:00:02.546Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\dajab\\Desktop\\project\\project-full-Klimes\\Project-full\\Project-full\\appsettings.json",
-              "RelativeDocumentMoniker": "Project-full\\appsettings.json",
-              "ToolTip": "C:\\Users\\dajab\\Desktop\\project\\project-full-Klimes\\Project-full\\Project-full\\appsettings.json",
-              "RelativeToolTip": "Project-full\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-03-22T15:05:16.255Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "appsettings.Development.json",
-              "DocumentMoniker": "C:\\Users\\dajab\\Desktop\\project\\project-full-Klimes\\Project-full\\Project-full\\appsettings.Development.json",
-              "RelativeDocumentMoniker": "Project-full\\appsettings.Development.json",
-              "ToolTip": "C:\\Users\\dajab\\Desktop\\project\\project-full-Klimes\\Project-full\\Project-full\\appsettings.Development.json",
-              "RelativeToolTip": "Project-full\\appsettings.Development.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-03-22T15:08:01.651Z"
+              "DocumentIndex": 3,
+              "Title": "PojisteniController.cs",
+              "DocumentMoniker": "C:\\Users\\dajab\\Desktop\\project\\project-full-Klimes\\Project-full\\Project-full\\Controllers\\PojisteniController.cs",
+              "RelativeDocumentMoniker": "Project-full\\Controllers\\PojisteniController.cs",
+              "ToolTip": "C:\\Users\\dajab\\Desktop\\project\\project-full-Klimes\\Project-full\\Project-full\\Controllers\\PojisteniController.cs",
+              "RelativeToolTip": "Project-full\\Controllers\\PojisteniController.cs",
+              "ViewState": "AgIAAHMAAAAAAAAAAAAwwH8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T07:55:43.124Z",
+              "EditorCaption": ""
             }
           ]
         },
@@ -240,6 +99,10 @@
           "DockedWidth": 110,
           "SelectedChildIndex": -1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
