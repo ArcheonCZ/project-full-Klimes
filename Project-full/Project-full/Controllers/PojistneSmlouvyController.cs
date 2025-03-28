@@ -27,8 +27,9 @@ namespace Project_full.Controllers
 		public async Task<IActionResult> Index()
 		{
 			var pojistneSmlouvy = await _context.PojistneSmlouvy
-		// .Include(ps => ps.Pojistenec)  // Načítáme související osobu (pojištěného)
+		 .Include(ps => ps.Pojistenec)  // Načítáme související osobu (pojištěného)
 		.Include(ps => ps.Pojisteni)   // Načítáme související pojištění
+		 .Where(ps=> ps.PojistenecId == _userManager.GetUserId(User))  //osoba přihlášená)
 		.ToListAsync();
 
 			return View(pojistneSmlouvy);
@@ -115,8 +116,8 @@ namespace Project_full.Controllers
 				return NotFound();
 			}
 			//Console.WriteLine($"Edit: Id z URL: {id}, Id modelu: {pojistnaSmlouva.Id}");
-			Console.WriteLine("Id pojistné smlouvy: "+pojistnaSmlouvaVM.Id);
-			Console.WriteLine("Název pojistné smlouvy: "+pojistnaSmlouvaVM.Nazev);
+			Console.WriteLine("Id pojistné smlouvy: " + pojistnaSmlouvaVM.Id);
+			Console.WriteLine("Název pojistné smlouvy: " + pojistnaSmlouvaVM.Nazev);
 			return View(pojistnaSmlouvaVM);
 		}
 
@@ -141,7 +142,7 @@ namespace Project_full.Controllers
 					var pojistnaSmlouva = await _context.PojistneSmlouvy
 						.Include(ps => ps.Pojisteni)
 						.FirstOrDefaultAsync(ps => ps.Id == model.Id);
-					pojistnaSmlouva.DelkaPojisteni=model.DelkaPojisteni;
+					pojistnaSmlouva.DelkaPojisteni = model.DelkaPojisteni;
 					pojistnaSmlouva.Expirace = pojistnaSmlouva.Expirace.AddDays((int)pojistnaSmlouva.DelkaPojisteni);
 					Console.WriteLine(pojistnaSmlouva.Expirace);
 					_context.Update(pojistnaSmlouva);

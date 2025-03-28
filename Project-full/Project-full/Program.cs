@@ -18,19 +18,21 @@ namespace Project_full
             builder.Services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(connectionString));
 
+            //builder.Services.AddDefaultIdentity<Osoba>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<ApplicationDbContext>();
+
          //   builder.Services.AddDefaultIdentity<Osoba>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<ApplicationDbContext>();
             builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 			//builder.Services.AddAuthentication(); //přidá se automaticky
 			builder.Services.AddAuthorization();
 			builder.Services.AddSingleton<IEmailSender, NullEmailSender>();
-			//defaultní
-			//builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-			//    .AddEntityFrameworkStores<ApplicationDbContext>();
+            //defaultní
+            //builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+            //    .AddEntityFrameworkStores<ApplicationDbContext>();
 
-			builder.Services.AddIdentity<Osoba, IdentityRole>()
+            builder.Services.AddIdentity<Osoba, IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>()
-				.AddDefaultTokenProviders(); 
+                .AddDefaultTokenProviders();
 
             builder.Services.AddControllersWithViews();
 			builder.Services.AddRazorPages();
