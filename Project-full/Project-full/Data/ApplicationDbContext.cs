@@ -8,7 +8,7 @@ namespace Project_full.Data
 
 	public class ApplicationDbContext : IdentityDbContext<Osoba>
 	{
-		//public DbSet<Osoba> Osoby { get; set; }
+		public DbSet<Osoba> Osoby { get; set; }
 		public DbSet<Pojisteni> Pojisteni { get; set; }
 		public DbSet<PojistnaSmlouva> PojistneSmlouvy { get; set; }
 

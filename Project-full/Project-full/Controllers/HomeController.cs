@@ -1,11 +1,13 @@
 using System.Diagnostics;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Project_full.Data;
 using Project_full.Models;
 
 namespace Project_full.Controllers
 {
-    public class HomeController : Controller
+	[Authorize(Roles = UserRoles.Admin)]
+	public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
 		private readonly ApplicationDbContext _context;
@@ -15,12 +17,13 @@ namespace Project_full.Controllers
             _logger = logger;
 			_context = context;
 		}
-
-        public IActionResult Index()
+		[AllowAnonymous]
+		public IActionResult Index()
 		{
 			return View();
 		}
-        public IActionResult SeznamPojisteni()
+		[AllowAnonymous]
+		public IActionResult SeznamPojisteni()
         {
 			if (!_context.Pojisteni.Any())  // Kontrola, zda tabulka není prázdná
 			{

@@ -9,7 +9,7 @@ namespace Project_full
 {
     public class Program
     {
-        public static void Main(string[] args)
+        public static async Task Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
 
@@ -65,7 +65,20 @@ namespace Project_full
                 pattern: "{controller=Home}/{action=Index}/{id?}");
             app.MapRazorPages();
 
-            app.Run();
+			using (IServiceScope scope = app.Services.CreateScope())
+			{
+				RoleManager<IdentityRole> roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+				UserManager<Osoba> userManager = scope.ServiceProvider.GetRequiredService<UserManager<Osoba>>();
+				Osoba? defaultAdminUser = await userManager.FindByEmailAsync("admin@admin.cz");
+
+				if (!await roleManager.RoleExistsAsync(UserRoles.Admin))
+					await roleManager.CreateAsync(new IdentityRole(UserRoles.Admin));
+
+				if (defaultAdminUser is not null && !await userManager.IsInRoleAsync(defaultAdminUser, UserRoles.Admin))
+					await userManager.AddToRoleAsync(defaultAdminUser, UserRoles.Admin);
+			}
+
+			app.Run();
         }
     }
 }
