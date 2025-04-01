@@ -11,7 +11,7 @@ namespace Project_full.Models
 		/// Primary key
 		/// </summary>
 		//[Key]
-		//public string Id { get; set; }
+		//public string Id { get; set; }  ///=> dědím z IdentityUSer, který má vlastní ID
 
 		/// <summary>
 		/// Jméno pojištěnce

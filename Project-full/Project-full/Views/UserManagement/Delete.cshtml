@@ -1,0 +1,40 @@
+﻿@model Osoba
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Ukončení uživatele</h1>
+
+<h3>Opravdu chceš smazat klienta?</h3>
+<div>
+   
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">Jméno</dt>
+        <dd class="col-sm-10">@Model.Jmeno</dd>
+
+        <dt class="col-sm-2">Příjmení</dt>
+        <dd class="col-sm-10">@Model.Prijmeni</dd>
+
+        <dt class="col-sm-2">Email</dt>
+        <dd class="col-sm-10">@Model.Email</dd>
+        <dt class="col-sm-2">Datum Narození</dt>
+        <dd class="col-sm-10">@Model.DatumNarozeni</dd>
+        <dt class="col-sm-2">Telefonní číslo</dt>
+        <dd class="col-sm-10">@Model.TelefonniCislo</dd>
+        <dt class="col-sm-2">Věk</dt>
+        <dd class="col-sm-10">@Model.Vek</dd>
+        <dt class="col-sm-2">Bonus/Malus</dt>
+        <dd class="col-sm-10">@Model.Bonus</dd>
+        <dt class="col-sm-2">Seznam pojistek</dt>
+        <dd class="col-sm-10">xxxx</dd>
+
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

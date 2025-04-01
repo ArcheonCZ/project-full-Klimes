@@ -38,7 +38,8 @@ namespace Project_full.Controllers
             }
 
             var pojisteni = await _context.Pojisteni
-                .FirstOrDefaultAsync(m => m.Id == id);
+                //.FirstOrDefaultAsync(m => m.Id == id);
+                .FindAsync(id);
             if (pojisteni == null)
             {
                 return NotFound();
@@ -127,8 +128,6 @@ namespace Project_full.Controllers
             {
                 return NotFound();
             }
-    //        var pojistneSmlouvy = await _context.PojistneSmlouvy
-				//.FirstOrDefaultAsync(ps => ps.Id == id); 
 
             var pojisteni = await _context.Pojisteni
                 .FirstOrDefaultAsync(m => m.Id == id);

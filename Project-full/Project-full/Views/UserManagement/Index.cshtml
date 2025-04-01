@@ -1,0 +1,71 @@
+﻿@model IEnumerable<Project_full.Models.Osoba>
+
+@{
+	ViewData["Title"] = "Index";
+}
+
+
+<h1>Seznam klientů</h1>
+@* <p>
+	<a asp-action="Create">Založ osobu</a>
+</p> *@
+
+<table class="table">
+	<thead>
+		<tr>
+			<th>
+				@Html.DisplayNameFor(model => model.Jmeno)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.Prijmeni)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.TelefonniCislo)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.Email)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.DatumNarozeni)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.Vek)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.Bonus)
+			</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var item in Model)
+		{
+			<tr>
+				<td>
+					@Html.DisplayFor(modelItem => item.Jmeno)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.Prijmeni)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.TelefonniCislo)
+				<td>
+						@Html.DisplayFor(modelItem => item.Email)
+				</td>
+				<td>
+						@Html.DisplayFor(modelItem => item.DatumNarozeni)
+				</td>
+				<td>
+						@Html.DisplayFor(modelItem => item.Vek)
+				</td>
+				<td>
+						@Html.DisplayFor(modelItem => item.Bonus)
+				</td>
+				<td>
+					<a asp-action="Edit" asp-route-id="@item.Id">Uprav údaje</a> |
+					<a asp-action="Details" asp-route-id="@item.Id">Detaily pojištěnce</a> |
+					<a asp-action="Delete" asp-route-id="@item.Id">Smazat pojištěnce</a>
+				</td>
+			</tr>
+		}
+	</tbody>
+</table>
