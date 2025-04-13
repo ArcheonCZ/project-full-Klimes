@@ -60,40 +60,36 @@ namespace Project_full.Controllers
 
 
 		// POST: /Edit/5
-		[HttpPost]
-		[ValidateAntiForgeryToken]
-		public async Task<ActionResult> Edit(string id, [Bind("Jmeno,Prijmeni,Email,DatumNarozeni,TelefonniCislo,Bonus")] Osoba osoba)
-		{
-			Console.WriteLine("string Id: "+id);
-			Console.WriteLine("Id uživatele: "+osoba.Id);
-			if (!id.Contains(osoba.Id))
+			[HttpPost]
+			[ValidateAntiForgeryToken]
+			public async Task<ActionResult> Edit(string id, [Bind("Id,Jmeno,Prijmeni,Email,DatumNarozeni,TelefonniCislo,Bonus")] Osoba osoba)
 			{
-				Console.WriteLine("Uživatel nenalezen - nemohu  editovat 2");
-				return NotFound();
-			}
+				Console.WriteLine("string Id: "+id);
+				Console.WriteLine("Id uživatele: "+osoba.Id);
+				if (!id.Contains(osoba.Id))
+				{
+					Console.WriteLine("Uživatel nenalezen - nemohu  editovat 2");
+					return NotFound();
+				}
 
-			if (ModelState.IsValid)
-			{
-				try
+				if (ModelState.IsValid)
 				{
-					await _userManager.UpdateAsync(osoba);
+				Console.WriteLine("Edit model state je validní!");
+					try
+					{
+						await _userManager.UpdateAsync(osoba);
 					//await _userManager.SaveChangesAsync(); //Entity Framework Core se o uložení postará samo
+					return RedirectToAction(nameof(Index));
 				}
-				catch (DbUpdateConcurrencyException)
-				{
+					catch (DbUpdateConcurrencyException)
+					{
+						throw;
+					}
+	
+					
 				}
-				//try
-				//{
-				//	return RedirectToAction(nameof(Index));
-				//}
-				//catch
-				//{
-				//return View();
-				//}
-				return RedirectToAction(nameof(Index));
+				return View(osoba);
 			}
-			return View(osoba);
-		}
 
 		// GET: HomeController1/Delete/5
 		public ActionResult Delete(string id)

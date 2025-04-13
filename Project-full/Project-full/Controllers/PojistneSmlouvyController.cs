@@ -123,9 +123,9 @@ namespace Project_full.Controllers
 			//vytvoříme viewModel
 			var pojistnaSmlouvaVM = new SjednaniPojisteniViewModel
 			{
-				PojistnaSmlouvaId = pojistnaSmlouva.Id,
+				PojistnaSmlouvaId = pojistnaSmlouva!.Id,
 				DelkaPojisteni = pojistnaSmlouva.DelkaPojisteni,
-				Nazev = pojistnaSmlouva.Pojisteni.Nazev,
+				Nazev = pojistnaSmlouva.Pojisteni!.Nazev,
 				Expirace = pojistnaSmlouva.Expirace,
 				PojisteniOptions = pojisteniSelectList,
 				DelkaPojisteniOptions = delkaPojisteniSelectList
@@ -165,8 +165,8 @@ namespace Project_full.Controllers
 					var pojistnaSmlouva = await _context.PojistneSmlouvy
 						.Include(ps => ps.Pojisteni)
 						.FirstOrDefaultAsync(ps => ps.Id == model.PojistnaSmlouvaId);
-					pojistnaSmlouva.DelkaPojisteni = model.DelkaPojisteni;
-					pojistnaSmlouva.Expirace = pojistnaSmlouva.Expirace.AddDays((int)pojistnaSmlouva.DelkaPojisteni);
+					pojistnaSmlouva!.DelkaPojisteni = model.DelkaPojisteni;
+					pojistnaSmlouva.Expirace = pojistnaSmlouva.Expirace.AddDays((int)pojistnaSmlouva.DelkaPojisteni!);
 					Console.WriteLine(pojistnaSmlouva.Expirace);
 					_context.Update(pojistnaSmlouva);
 					await _context.SaveChangesAsync();

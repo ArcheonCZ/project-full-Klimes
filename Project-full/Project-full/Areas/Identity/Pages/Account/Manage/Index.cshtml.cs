@@ -61,18 +61,18 @@ namespace Project_full.Areas.Identity.Pages.Account.Manage
             public string PhoneNumber { get; set; }
         }
 
-        private async Task LoadAsync(Osoba user)
-        {
-            var userName = await _userManager.GetUserNameAsync(user);
-            var phoneNumber = await _userManager.GetPhoneNumberAsync(user);
+        //private async Task LoadAsync(Osoba user)
+        //{
+        //    var userName = await _userManager.GetUserNameAsync(user);
+        //    var phoneNumber = await _userManager.GetPhoneNumberAsync(user);
 
-            Username = userName;
+        //    Username = userName;
 
-            Input = new InputModel
-            {
-                PhoneNumber = phoneNumber
-            };
-        }
+        //    Input = new InputModel
+        //    {
+        //        PhoneNumber = phoneNumber
+        //    };
+        //}
 
         public async Task<IActionResult> OnGetAsync()
         {
@@ -82,12 +82,19 @@ namespace Project_full.Areas.Identity.Pages.Account.Manage
                 return NotFound($"Unable to load user with ID '{_userManager.GetUserId(User)}'.");
             }
 
-            await LoadAsync(user);
-            return Page();
-        }
+            //await LoadAsync(user);
+			//  return Page();
+			Console.WriteLine("Zavolala se OnGetAsync!");
+			return RedirectToAction("Edit", "UserManagement", new { id = user.Id });
+		}
 
+        /// <summary>
+        /// //asi zbytečné
+        /// </summary>
+        /// <returns></returns>
         public async Task<IActionResult> OnPostAsync()
         {
+			Console.WriteLine("Voláme OnPostAsync, bacha???!?!?!");
             var user = await _userManager.GetUserAsync(User);
             if (user == null)
             {
@@ -96,7 +103,7 @@ namespace Project_full.Areas.Identity.Pages.Account.Manage
 
             if (!ModelState.IsValid)
             {
-                await LoadAsync(user);
+                //await LoadAsync(user);
                 return Page();
             }
 

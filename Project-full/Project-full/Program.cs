@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.EntityFrameworkCore;
+
 using Project_full.Data;
 using Project_full.Models;
 using Project_full.Utils;
@@ -20,22 +21,35 @@ namespace Project_full
 
             //builder.Services.AddDefaultIdentity<Osoba>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<ApplicationDbContext>();
 
-         //   builder.Services.AddDefaultIdentity<Osoba>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<ApplicationDbContext>();
             builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 			//builder.Services.AddAuthentication(); //přidá se automaticky
 			builder.Services.AddAuthorization();
 			builder.Services.AddSingleton<IEmailSender, NullEmailSender>();
-            //defaultní
-            //builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-            //    .AddEntityFrameworkStores<ApplicationDbContext>();
+
 
             builder.Services.AddIdentity<Osoba, IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
 
             builder.Services.AddControllersWithViews();
-			builder.Services.AddRazorPages();
+			builder.Services.AddRazorPages(options =>
+			{
+				options.Conventions.AddAreaPageRoute(
+					areaName: "Identity",
+					pageName: "/Account/Login",
+					route: "Account/Login");
+
+				options.Conventions.AddAreaPageRoute(
+					areaName: "Identity",
+					pageName: "/Account/Register",
+					route: "Account/Register");
+
+				options.Conventions.AddAreaPageRoute(
+					areaName: "Identity",
+					pageName: "/Account/Manage/Index",
+					route: "Account/Manage");
+			});
 
 			var app = builder.Build();
 
@@ -63,7 +77,9 @@ namespace Project_full
 			app.MapControllerRoute(
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");
-            app.MapRazorPages();
+			app.MapRazorPages();
+
+			
 
 			using (IServiceScope scope = app.Services.CreateScope())
 			{

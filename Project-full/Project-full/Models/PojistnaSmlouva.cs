@@ -30,7 +30,7 @@ namespace Project_full.Models
 		
 		public string? PojistenecId { get; set; }
 		[ForeignKey("PojistenecId")]
-		public virtual Osoba Pojistenec { get; set; }
+		public virtual Osoba? Pojistenec { get; set; }
 
 		/// <summary>
 		/// Datum, do kterého je pojištění uzavřeno
@@ -38,7 +38,7 @@ namespace Project_full.Models
 		
 		public int? PojisteniId { get; set; }
 		[ForeignKey("PojisteniId")]
-		public virtual Pojisteni Pojisteni { get; set; }
+		public virtual Pojisteni? Pojisteni { get; set; }
 		public DelkaPojisteniValues DelkaPojisteni { get; set; }
 		public DateTime Expirace { get; set; }
 		/// <summary>

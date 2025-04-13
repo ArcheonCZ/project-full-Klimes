@@ -10,8 +10,8 @@ namespace Project_full.Models
 		public int PojisteniId { get; set; }
 		public int PojistnaSmlouvaId { get; set; }
 		public DelkaPojisteniValues DelkaPojisteni { get; set; }
-		
-		public  string Nazev { get; set; }
+
+		public string Nazev { get; set; } = "";
 		public DateTime Expirace { get; set; }
 		
 		public SelectList? PojisteniOptions { get; set; }  // Pojisteni SelectList
