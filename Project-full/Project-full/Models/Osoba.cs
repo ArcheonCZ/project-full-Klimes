@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Reflection;
 using Microsoft.AspNetCore.Identity;
 
 namespace Project_full.Models
@@ -16,22 +17,22 @@ namespace Project_full.Models
 		/// <summary>
 		/// Jméno pojištěnce
 		/// </summary>
-		[Required]
+		[Required, Display(Name = "Jméno")]
 		public string Jmeno { get; set; } = "";
 		/// <summary>
 		/// Příjmení pojištěnce
 		/// </summary>
-		[Required]
+		[Required, Display(Name = "Příjmení")]
 		public string Prijmeni { get; set; } = "";
 		/// <summary>
 		/// Datum narození pojištěnce
 		/// </summary>
-		 [Required]
+		[Required, Display(Name = "Datum narození")]
 		public DateTime DatumNarozeni { get; set; }
 		/// <summary>
 		/// Věk pojištěnce - automaticky dogenerovaný
 		/// </summary>
-		[NotMapped]
+		[NotMapped, Display(Name = "Věk")]
 		public int Vek
 		{
 			get
@@ -48,8 +49,8 @@ namespace Project_full.Models
 		/// <summary>
 		/// Telefonní číslo pojištěnce
 		/// </summary>
-		 [Phone]
-		[Required]
+		
+		[Required, Phone, Display(Name = "Telefonní číslo")]
 		public string TelefonniCislo { get; set; } = "";
 
 		/// <summary>
@@ -60,13 +61,40 @@ namespace Project_full.Models
 		/// <summary>
 		/// Cizí klíč na tabulku AspNetUsers
 		/// </summary>
-		
+
 		//public string UserId { get; set; }
 
 		/// <summary>
 		/// Seznam uzavřených pojistných smluv
 		/// </summary>
+		[Display(Name ="Seznam pojištění")]
 		public  List<PojistnaSmlouva> SeznamPojisteni = new List<PojistnaSmlouva>();
+
+		public Osoba UpravUdaje (OsobaEditViewModel osobaEditVM)
+		{
+			PropertyInfo[] osobaProperties = typeof(Osoba).GetProperties();
+			PropertyInfo[] osobaVMProperties = typeof(OsobaEditViewModel).GetProperties();
+			foreach (PropertyInfo prop in osobaProperties)
+			{
+				if (prop.CanWrite)
+				{
+					//pokud sedí jméno a datový typ
+					var vmProp = osobaVMProperties.FirstOrDefault(p => p.Name == prop.Name && p.PropertyType == prop.PropertyType);
+					if (vmProp != null)
+					{
+						// Získáme hodnotu z ViewModelu
+						var novaHodnota = vmProp.GetValue(osobaEditVM);
+						// Nastavíme do aktuální instance Osoba
+						prop.SetValue(this, novaHodnota);
+					}
+				}
+				else
+					continue;
+			}
+			return this;
+		}
+
+
 
 
 		/// <summary>

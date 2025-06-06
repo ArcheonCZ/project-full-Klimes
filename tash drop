@@ -1,0 +1,95 @@
+[33mcommit 5de0a00d3081d85f8215aaf4ab0629a623721377[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: ArcheonCZ <danklimes@gmail.com>
+Date:   Sun Apr 13 18:52:58 2025 +0200
+
+    další úpravy + je potřeba opravit edit osoby
+
+[33mcommit fe1b90bf4425fc2799bc48be9eac043fa870bbbd[m
+Author: Daniel <danklimes@gmail.com>
+Date:   Tue Apr 1 17:18:24 2025 +0200
+
+    CRUD uživatelů napsán, potřeba zkontrolovat
+
+[33mcommit 3653b9bb77870c8a1be4dceb74aa6e6fc62ade8f[m
+Author: Daniel <danklimes@gmail.com>
+Date:   Mon Mar 31 15:47:00 2025 +0200
+
+    začátek práce na roli admina
+
+[33mcommit aa21e8920ed36386c35806d850ec2226297465f8[m
+Author: ArcheonCZ <danklimes@gmail.com>
+Date:   Fri Mar 28 15:09:49 2025 +0100
+
+    zakladni funkcionality funguji
+
+[33mcommit e2afb8382174a461f890c7180aacb22f1a0e4aee[m
+Author: ArcheonCZ <danklimes@gmail.com>
+Date:   Fri Mar 28 09:38:28 2025 +0100
+
+    musim predelat selectlisty v kontrolleru vsude, mozna i migrace db?
+
+[33mcommit 45299d739a74d35e5a34162944058b239010c8cf[m
+Author: ArcheonCZ <danklimes@gmail.com>
+Date:   Fri Mar 28 08:53:38 2025 +0100
+
+    opraven logOut a ManageAccount
+
+[33mcommit 99f8138058a789a2118d3a25fd858822387c3c3d[m
+Author: Daniel <danklimes@gmail.com>
+Date:   Thu Mar 27 15:40:19 2025 +0100
+
+    prodloužení pojištění funkční
+
+[33mcommit 5b062c7741ea1b2a2110c1dffc32fc3993e71eb1[m
+Author: ArcheonCZ <danklimes@gmail.com>
+Date:   Sat Mar 22 17:46:46 2025 +0100
+
+    téměř opraven edit
+
+[33mcommit 16bc29281259c1fc574700de86f4d6a5fb5ebe9e[m
+Author: Daniel <danklimes@gmail.com>
+Date:   Thu Mar 20 17:19:46 2025 +0100
+
+    uprava listu pojistek uzivatele
+
+[33mcommit 90b6ce194ca55cba6e976b36e16383ea255a9d06[m
+Author: Daniel <danklimes@gmail.com>
+Date:   Tue Mar 18 17:21:26 2025 +0100
+
+    opraven redakční systém, sjednání nového pojištění
+
+[33mcommit 5b63b89b53868d80b6d1ca620f0091050c2db225[m
+Author: Daniel <danklimes@gmail.com>
+Date:   Sat Mar 15 13:38:06 2025 +0100
+
+    tvoření nového pojištění
+
+[33mcommit 4f952550e38bfb1331b4fa0b202506c8d06a4112[m
+Author: Daniel <danklimes@gmail.com>
+Date:   Fri Mar 14 16:51:07 2025 +0100
+
+    Upravena registrace uživatele
+
+[33mcommit 75e6a9cfa71a7173263b31e8d8340db1281669c1[m
+Author: Daniel <danklimes@gmail.com>
+Date:   Thu Mar 13 16:52:14 2025 +0100
+
+    Přidán controller pro Pojisteni - vcetne CRUD
+
+[33mcommit 4a1a63310c7fc51f4e06ed18bde57452f004054f[m
+Author: Daniel <danklimes@gmail.com>
+Date:   Wed Mar 12 17:36:10 2025 +0100
+
+    Testovací data v HomeController + kardinalita v DbContext
+
+[33mcommit 7d87fc55ec5330353bf4338f3c44d80edc35c28a[m
+Author: Daniel <danklimes@gmail.com>
+Date:   Tue Mar 11 16:00:24 2025 +0100
+
+    Založeny třídy Osoba, PojistnaSmlouva a Pojisteni
+
+[33mcommit 4beb7b82f3d04a22d1ad240772fba06eff658ea8[m
+Author: Daniel <danklimes@gmail.com>
+Date:   Mon Mar 10 16:43:07 2025 +0100
+
+    Založení projektu

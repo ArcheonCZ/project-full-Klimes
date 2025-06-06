@@ -53,42 +53,51 @@ namespace Project_full.Controllers
 			{
 				Console.WriteLine("Uživatel nenalezen - nemohu  editovat");
 				return NotFound();
-				
+
 			}
 			return View(user);
 		}
 
 
 		// POST: /Edit/5
-			[HttpPost]
+		[HttpPost]
 			[ValidateAntiForgeryToken]
-			public async Task<ActionResult> Edit(string id, [Bind("Id,Jmeno,Prijmeni,Email,DatumNarozeni,TelefonniCislo,Bonus")] Osoba osoba)
+			public async Task<ActionResult> Edit(string id, [Bind("Id,Jmeno,Prijmeni,Email,DatumNarozeni,TelefonniCislo,Bonus")] OsobaEditViewModel OsobaEditVM)
 			{
 				Console.WriteLine("string Id: "+id);
-				Console.WriteLine("Id uživatele: "+osoba.Id);
-				if (!id.Contains(osoba.Id))
+				Console.WriteLine("Id uživatele: "+OsobaEditVM.Id);
+				if (!id.Contains(OsobaEditVM.Id))
 				{
-					Console.WriteLine("Uživatel nenalezen - nemohu  editovat 2");
+					Console.WriteLine("Uživatelům nesedí id - nemohu  editovat 2");
 					return NotFound();
 				}
 
-				if (ModelState.IsValid)
+				if (!ModelState.IsValid)
 				{
-				Console.WriteLine("Edit model state je validní!");
-					try
-					{
-						await _userManager.UpdateAsync(osoba);
-					//await _userManager.SaveChangesAsync(); //Entity Framework Core se o uložení postará samo
+					Console.WriteLine("Model state neni validni!!!");
+					return NotFound();
+				}
+				else
+				{
+					Console.WriteLine("Edit model state je validní!");
+					Osoba? upravenaOsoba = await _userManager.FindByIdAsync(id);
+					if (upravenaOsoba == null)
+						return NotFound();
+					upravenaOsoba.UpravUdaje(OsobaEditVM);
+					await _userManager.UpdateAsync(upravenaOsoba);
+					//try
+					//{
+					//	await _userManager.UpdateAsync(osoba);
+					////await _userManager.SaveChangesAsync(); //Entity Framework Core se o uložení postará samo
+					//return RedirectToAction(nameof(Index));
+					//}
+					//catch (DbUpdateConcurrencyException)
+					//{
+					//	throw;
+					//}
+
 					return RedirectToAction(nameof(Index));
-				}
-					catch (DbUpdateConcurrencyException)
-					{
-						throw;
-					}
-	
-					
-				}
-				return View(osoba);
+			}
 			}
 
 		// GET: HomeController1/Delete/5

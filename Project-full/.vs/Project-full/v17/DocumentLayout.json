@@ -1,26 +1,38 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\dajab\\Desktop\\project\\project-full-Klimes\\Project-full\\",
+  "WorkspaceRootPath": "C:\\project-full-Klimes\\Project-full\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C1887D59-4E25-4954-9EE0-1170ED2F5674}|Project-full\\Project-full.csproj|c:\\users\\dajab\\desktop\\project\\project-full-klimes\\project-full\\project-full\\views\\usermanagement\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C1887D59-4E25-4954-9EE0-1170ED2F5674}|Project-full\\Project-full.csproj|solutionrelative:project-full\\views\\usermanagement\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{C1887D59-4E25-4954-9EE0-1170ED2F5674}|Project-full\\Project-full.csproj|c:\\project-full-klimes\\project-full\\project-full\\models\\osoba.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1887D59-4E25-4954-9EE0-1170ED2F5674}|Project-full\\Project-full.csproj|solutionrelative:project-full\\models\\osoba.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C1887D59-4E25-4954-9EE0-1170ED2F5674}|Project-full\\Project-full.csproj|c:\\users\\dajab\\desktop\\project\\project-full-klimes\\project-full\\project-full\\controllers\\usermanagementcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C1887D59-4E25-4954-9EE0-1170ED2F5674}|Project-full\\Project-full.csproj|c:\\project-full-klimes\\project-full\\project-full\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C1887D59-4E25-4954-9EE0-1170ED2F5674}|Project-full\\Project-full.csproj|solutionrelative:project-full\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1887D59-4E25-4954-9EE0-1170ED2F5674}|Project-full\\Project-full.csproj|c:\\project-full-klimes\\project-full\\project-full\\views\\pojisteni\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C1887D59-4E25-4954-9EE0-1170ED2F5674}|Project-full\\Project-full.csproj|solutionrelative:project-full\\views\\pojisteni\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1887D59-4E25-4954-9EE0-1170ED2F5674}|Project-full\\Project-full.csproj|c:\\project-full-klimes\\project-full\\project-full\\views\\pojistnesmlouvy\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C1887D59-4E25-4954-9EE0-1170ED2F5674}|Project-full\\Project-full.csproj|solutionrelative:project-full\\views\\pojistnesmlouvy\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1887D59-4E25-4954-9EE0-1170ED2F5674}|Project-full\\Project-full.csproj|c:\\project-full-klimes\\project-full\\project-full\\views\\usermanagement\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C1887D59-4E25-4954-9EE0-1170ED2F5674}|Project-full\\Project-full.csproj|solutionrelative:project-full\\views\\usermanagement\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1887D59-4E25-4954-9EE0-1170ED2F5674}|Project-full\\Project-full.csproj|c:\\project-full-klimes\\project-full\\project-full\\views\\pojisteni\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C1887D59-4E25-4954-9EE0-1170ED2F5674}|Project-full\\Project-full.csproj|solutionrelative:project-full\\views\\pojisteni\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1887D59-4E25-4954-9EE0-1170ED2F5674}|Project-full\\Project-full.csproj|c:\\project-full-klimes\\project-full\\project-full\\controllers\\usermanagementcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C1887D59-4E25-4954-9EE0-1170ED2F5674}|Project-full\\Project-full.csproj|solutionrelative:project-full\\controllers\\usermanagementcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C1887D59-4E25-4954-9EE0-1170ED2F5674}|Project-full\\Project-full.csproj|c:\\users\\dajab\\desktop\\project\\project-full-klimes\\project-full\\project-full\\areas\\identity\\pages\\account\\manage\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C1887D59-4E25-4954-9EE0-1170ED2F5674}|Project-full\\Project-full.csproj|solutionrelative:project-full\\areas\\identity\\pages\\account\\manage\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C1887D59-4E25-4954-9EE0-1170ED2F5674}|Project-full\\Project-full.csproj|c:\\users\\dajab\\desktop\\project\\project-full-klimes\\project-full\\project-full\\areas\\identity\\pages\\account\\manage\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C1887D59-4E25-4954-9EE0-1170ED2F5674}|Project-full\\Project-full.csproj|solutionrelative:project-full\\areas\\identity\\pages\\account\\manage\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C1887D59-4E25-4954-9EE0-1170ED2F5674}|Project-full\\Project-full.csproj|c:\\users\\dajab\\desktop\\project\\project-full-klimes\\project-full\\project-full\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C1887D59-4E25-4954-9EE0-1170ED2F5674}|Project-full\\Project-full.csproj|solutionrelative:project-full\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C1887D59-4E25-4954-9EE0-1170ED2F5674}|Project-full\\Project-full.csproj|c:\\project-full-klimes\\project-full\\project-full\\views\\shared\\notfound.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C1887D59-4E25-4954-9EE0-1170ED2F5674}|Project-full\\Project-full.csproj|solutionrelative:project-full\\views\\shared\\notfound.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,71 +42,110 @@
       "DocumentGroups": [
         {
           "DockedWidth": 110,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Users\\dajab\\Desktop\\project\\project-full-Klimes\\Project-full\\Project-full\\Views\\UserManagement\\Edit.cshtml",
-              "RelativeDocumentMoniker": "Project-full\\Views\\UserManagement\\Edit.cshtml",
-              "ToolTip": "C:\\Users\\dajab\\Desktop\\project\\project-full-Klimes\\Project-full\\Project-full\\Views\\UserManagement\\Edit.cshtml",
-              "RelativeToolTip": "Project-full\\Views\\UserManagement\\Edit.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA9AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-13T16:49:48.658Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UserManagementController.cs",
-              "DocumentMoniker": "C:\\Users\\dajab\\Desktop\\project\\project-full-Klimes\\Project-full\\Project-full\\Controllers\\UserManagementController.cs",
-              "RelativeDocumentMoniker": "Project-full\\Controllers\\UserManagementController.cs",
-              "ToolTip": "C:\\Users\\dajab\\Desktop\\project\\project-full-Klimes\\Project-full\\Project-full\\Controllers\\UserManagementController.cs",
-              "RelativeToolTip": "Project-full\\Controllers\\UserManagementController.cs",
-              "ViewState": "AgIAAEIAAAAAAAAAAAAswFEAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T16:26:45.4Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\dajab\\Desktop\\project\\project-full-Klimes\\Project-full\\Project-full\\Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml",
-              "RelativeDocumentMoniker": "Project-full\\Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml",
-              "ToolTip": "C:\\Users\\dajab\\Desktop\\project\\project-full-Klimes\\Project-full\\Project-full\\Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml",
-              "RelativeToolTip": "Project-full\\Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\project-full-Klimes\\Project-full\\Project-full\\Views\\PojistneSmlouvy\\Index.cshtml",
+              "RelativeDocumentMoniker": "Project-full\\Views\\PojistneSmlouvy\\Index.cshtml",
+              "ToolTip": "C:\\project-full-Klimes\\Project-full\\Project-full\\Views\\PojistneSmlouvy\\Index.cshtml",
+              "RelativeToolTip": "Project-full\\Views\\PojistneSmlouvy\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-13T16:16:52.411Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Index.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\dajab\\Desktop\\project\\project-full-Klimes\\Project-full\\Project-full\\Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml.cs",
-              "RelativeDocumentMoniker": "Project-full\\Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml.cs",
-              "ToolTip": "C:\\Users\\dajab\\Desktop\\project\\project-full-Klimes\\Project-full\\Project-full\\Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml.cs",
-              "RelativeToolTip": "Project-full\\Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml.cs",
-              "ViewState": "AgIAAFIAAAAAAAAAAAAwwFsAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T16:05:13.669Z",
+              "WhenOpened": "2025-06-06T14:35:12.47Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\dajab\\Desktop\\project\\project-full-Klimes\\Project-full\\Project-full\\Program.cs",
-              "RelativeDocumentMoniker": "Project-full\\Program.cs",
-              "ToolTip": "C:\\Users\\dajab\\Desktop\\project\\project-full-Klimes\\Project-full\\Project-full\\Program.cs",
-              "RelativeToolTip": "Project-full\\Program.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAQwDIAAAAeAAAAAAAAAA==",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\project-full-Klimes\\Project-full\\Project-full\\Views\\UserManagement\\Index.cshtml",
+              "RelativeDocumentMoniker": "Project-full\\Views\\UserManagement\\Index.cshtml",
+              "ToolTip": "C:\\project-full-Klimes\\Project-full\\Project-full\\Views\\UserManagement\\Index.cshtml",
+              "RelativeToolTip": "Project-full\\Views\\UserManagement\\Index.cshtml",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAAD8AAABaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-06T14:34:38.414Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\project-full-Klimes\\Project-full\\Project-full\\Views\\Pojisteni\\Create.cshtml",
+              "RelativeDocumentMoniker": "Project-full\\Views\\Pojisteni\\Create.cshtml",
+              "ToolTip": "C:\\project-full-Klimes\\Project-full\\Project-full\\Views\\Pojisteni\\Create.cshtml",
+              "RelativeToolTip": "Project-full\\Views\\Pojisteni\\Create.cshtml",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAAB4AAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-06T14:30:58.552Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\project-full-Klimes\\Project-full\\Project-full\\Views\\Pojisteni\\Index.cshtml",
+              "RelativeDocumentMoniker": "Project-full\\Views\\Pojisteni\\Index.cshtml",
+              "ToolTip": "C:\\project-full-Klimes\\Project-full\\Project-full\\Views\\Pojisteni\\Index.cshtml",
+              "RelativeToolTip": "Project-full\\Views\\Pojisteni\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC0AAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-06T14:29:40.592Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Osoba.cs",
+              "DocumentMoniker": "C:\\project-full-Klimes\\Project-full\\Project-full\\Models\\Osoba.cs",
+              "RelativeDocumentMoniker": "Project-full\\Models\\Osoba.cs",
+              "ToolTip": "C:\\project-full-Klimes\\Project-full\\Project-full\\Models\\Osoba.cs",
+              "RelativeToolTip": "Project-full\\Models\\Osoba.cs",
+              "ViewState": "AgIAADoAAAAAAAAAAAAcwEQAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T15:56:46Z",
+              "WhenOpened": "2025-06-06T12:19:59.929Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "NotFound.cshtml",
+              "DocumentMoniker": "C:\\project-full-Klimes\\Project-full\\Project-full\\Views\\Shared\\NotFound.cshtml",
+              "RelativeDocumentMoniker": "Project-full\\Views\\Shared\\NotFound.cshtml",
+              "ToolTip": "C:\\project-full-Klimes\\Project-full\\Project-full\\Views\\Shared\\NotFound.cshtml",
+              "RelativeToolTip": "Project-full\\Views\\Shared\\NotFound.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-06T12:05:18.389Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\project-full-Klimes\\Project-full\\Project-full\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Project-full\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\project-full-Klimes\\Project-full\\Project-full\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Project-full\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAACcAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-06T12:04:50.141Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UserManagementController.cs",
+              "DocumentMoniker": "C:\\project-full-Klimes\\Project-full\\Project-full\\Controllers\\UserManagementController.cs",
+              "RelativeDocumentMoniker": "Project-full\\Controllers\\UserManagementController.cs",
+              "ToolTip": "C:\\project-full-Klimes\\Project-full\\Project-full\\Controllers\\UserManagementController.cs",
+              "RelativeToolTip": "Project-full\\Controllers\\UserManagementController.cs",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAUwGIAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-13T16:26:45.4Z",
               "EditorCaption": ""
             }
           ]
@@ -105,7 +156,7 @@
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Bookmark",
@@ -122,6 +173,20 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 110,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
             }
           ]
         }
