@@ -5,10 +5,10 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>Detail</h1>
+<h1>Detail pojistné smlouvy</h1>
 
 <div>
-    <h4>PojistnaSmlouva</h4>
+    
     <hr />
     <dl class="row">
 @*         <dt class = "col-sm-2">
@@ -38,6 +38,6 @@
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Uprav</a> |
-    <a asp-action="Index">Zpět na seznam</a>
+    <a class="btn btn-primary" asp-action="Edit" asp-route-id="@Model?.Id">Uprav</a> 
+    <a class="btn btn-warning" asp-action="Index">Zpět na seznam</a>
 </div>

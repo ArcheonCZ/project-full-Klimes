@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -29,17 +30,20 @@ namespace Project_full.Controllers
 		}
 
 		// GET: PojistneSmlouvy
-		public async Task<IActionResult> Index()
+		[Route("Pojisteni/{id?}")]
+		public async Task<IActionResult> Index(string? id)
 		{
+			string? userId = id ?? _userManager.GetUserId(User);
+
 			var pojistneSmlouvy = await _context.PojistneSmlouvy
 		 .Include(ps => ps.Pojistenec)  // Načítáme související osobu (pojištěného)
 		.Include(ps => ps.Pojisteni)   // Načítáme související pojištění
-		 .Where(ps => ps.PojistenecId == _userManager.GetUserId(User))  //osoba přihlášená)
+		 .Where(ps => ps.PojistenecId == userId)  //osoba přihlášená)
 		.ToListAsync();
 
 			return View(pojistneSmlouvy);
 
-			//return View(await _context.PojistneSmlouvy.ToListAsync());
+			
 		}
 
 		// GET: PojistneSmlouvy/Details/5

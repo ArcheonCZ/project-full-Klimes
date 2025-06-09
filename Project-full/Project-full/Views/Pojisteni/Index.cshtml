@@ -4,17 +4,16 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Sjednání nového pojištění</h1>
-
+<h1>Seznam dostupných pojištění </h1>
+<hr>
 @if (TempData["ErrorMessage"] != null)
 {
             <div class="alert alert-danger">
         @TempData["ErrorMessage"]
             </div>
 }
-<p>
-    <a asp-action="Create">Vytvořit</a>
-</p>
+
+
 <table class="table">
     <thead>
         <tr>
@@ -51,3 +50,11 @@
 }
     </tbody>
 </table>
+
+@if (User.IsInRole(UserRoles.Admin))
+{
+    <h3>Vytvořit nové pojištění</h3>
+    <p>
+        <a class="btn btn-success" asp-action="Create">Vytvořit</a>
+    </p>
+}

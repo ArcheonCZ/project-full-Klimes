@@ -22,13 +22,27 @@
         <dt class="col-sm-2">Bonus/Malus</dt>
         <dd class="col-sm-10">@Model.Bonus</dd>
         <dt class="col-sm-2">Seznam pojistek</dt>
-        <dd class="col-sm-10">xxxx</dd>
+        
+            <table>
+                <tbody>
+            @foreach (var item in Model.SeznamPojisteni) {
+               <tr>
+				    <td> @item.Pojisteni.Nazev </td>
+                    <td> @item.Expirace </td>
+                </tr>
+            }
+                </tbody>
+            </table>
+       
         
     </dl>
 
     <div>
-        <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
-        <a asp-action="Index">Zpět na seznam</a>
+
+        <a class="btn btn-success" asp-controller="PojistneSmlouvy" asp-action="Index" asp-route-id="@Model?.Id">Upravit pojištění</a>
+        <a class="btn btn-primary" asp-action="Edit" asp-route-id="@Model?.Id">Upravit osobní údaje</a> 
+        <a class="btn btn-warning" asp-action="Index">Zpět na seznam</a>
+
     </div>
   
 </div>

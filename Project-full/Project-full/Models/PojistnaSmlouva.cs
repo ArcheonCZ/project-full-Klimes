@@ -46,7 +46,7 @@ namespace Project_full.Models
 		/// mělo by být spíše list objektů PojistnaUdalost, nikoliv stringu....
 		/// </summary>
 
-		/// Zde by se hodila vytvořit třída PojistnaUdalost a ne primitivní string, ale pro jednoduchost takto
+		[Display(Name ="Pojistná Událost")]
 		public List<string> PojistnaUdalost { get; private set; } = new List<string>();
 
 	}

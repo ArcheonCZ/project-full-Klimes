@@ -48,7 +48,7 @@ namespace Project_full
 				options.Conventions.AddAreaPageRoute(
 					areaName: "Identity",
 					pageName: "/Account/Manage/Index",
-					route: "Account/Manage");
+					route: "UserManagement/Details");
 			});
 
 			var app = builder.Build();
