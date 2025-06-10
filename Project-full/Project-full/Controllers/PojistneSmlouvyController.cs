@@ -30,16 +30,16 @@ namespace Project_full.Controllers
 		}
 
 		// GET: PojistneSmlouvy
-		[Route("Pojisteni/{id?}")]
+		[Route("PojistneSmlouvy/{id?}")]
 		public async Task<IActionResult> Index(string? id)
 		{
-			string? userId = id ?? _userManager.GetUserId(User);
+			string? userId = id ?? _userManager.GetUserId(User); //do userId se nahraje id z parametru a pokud je NULL, nahraje se id přihlášeného uživatele
 
 			var pojistneSmlouvy = await _context.PojistneSmlouvy
-		 .Include(ps => ps.Pojistenec)  // Načítáme související osobu (pojištěného)
-		.Include(ps => ps.Pojisteni)   // Načítáme související pojištění
-		 .Where(ps => ps.PojistenecId == userId)  //osoba přihlášená)
-		.ToListAsync();
+				.Include(ps => ps.Pojistenec)  // Načítáme související osobu (pojištěného)
+				.Include(ps => ps.Pojisteni)   // Načítáme související pojištění
+				.Where(ps => ps.PojistenecId == userId)  //osoba přihlášená)
+				.ToListAsync();
 
 			return View(pojistneSmlouvy);
 
@@ -68,14 +68,13 @@ namespace Project_full.Controllers
 		// GET: PojistneSmlouvy/Create
 		public IActionResult Create()
 		{
-
+			Console.WriteLine("PojistneSmlouvy/Create");
 			var model = new SjednaniPojisteniViewModel
 			{
 				PojisteniOptions = pojisteniSelectList,
 				DelkaPojisteniOptions = delkaPojisteniSelectList
 			};
-			//ViewBag.PojisteniList = new SelectList(pojisteniList, "Id", "Nazev", "Cena");
-			//ViewBag.PlatnostList = new SelectList(Enum.GetValues(typeof(DelkaPojisteniValues)));
+
 			return View(model);
 		}
 

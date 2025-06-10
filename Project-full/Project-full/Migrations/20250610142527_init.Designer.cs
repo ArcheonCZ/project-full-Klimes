@@ -12,8 +12,8 @@ using Project_full.Data;
 namespace Project_full.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250331133220_dbcontextosoba2")]
-    partial class dbcontextosoba2
+    [Migration("20250610142527_init")]
+    partial class init
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

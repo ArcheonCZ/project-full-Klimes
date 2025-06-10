@@ -4,9 +4,9 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
+<h1>Vytvořit pojištění</h1>
 
-<h4>Pojisteni</h4>
+
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -28,13 +28,13 @@
                 <span asp-validation-for="PojistnaCastka" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Vytvořit" class="btn btn-primary my-1" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a class="btn btn-warning" asp-action="Index">Zpět na seznam</a>
 </div>
 

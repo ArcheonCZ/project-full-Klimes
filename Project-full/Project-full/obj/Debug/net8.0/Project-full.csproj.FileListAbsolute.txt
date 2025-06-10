@@ -283,12 +283,6 @@ C:\project-full-Klimes\Project-full\Project-full\obj\Debug\net8.0\scopedcss\proj
 C:\project-full-Klimes\Project-full\Project-full\obj\Debug\net8.0\staticwebassets.build.json
 C:\project-full-Klimes\Project-full\Project-full\obj\Debug\net8.0\staticwebassets.development.json
 C:\project-full-Klimes\Project-full\Project-full\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-C:\project-full-Klimes\Project-full\Project-full\obj\Debug\net8.0\staticwebassets\msbuild.Project-full.Microsoft.AspNetCore.StaticWebAssets.props
-C:\project-full-Klimes\Project-full\Project-full\obj\Debug\net8.0\staticwebassets\msbuild.Project-full.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
-C:\project-full-Klimes\Project-full\Project-full\obj\Debug\net8.0\staticwebassets\msbuild.build.Project-full.props
-C:\project-full-Klimes\Project-full\Project-full\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.Project-full.props
-C:\project-full-Klimes\Project-full\Project-full\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.Project-full.props
-C:\project-full-Klimes\Project-full\Project-full\obj\Debug\net8.0\staticwebassets.pack.json
 C:\project-full-Klimes\Project-full\Project-full\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\project-full-Klimes\Project-full\Project-full\obj\Debug\net8.0\Project-.F458D666.Up2Date
 C:\project-full-Klimes\Project-full\Project-full\obj\Debug\net8.0\Project-full.dll
@@ -594,3 +588,4 @@ C:\Users\dajab\Desktop\project\project-full-Klimes\Project-full\Project-full\obj
 C:\Users\dajab\Desktop\project\project-full-Klimes\Project-full\Project-full\obj\Debug\net8.0\Project-full.pdb
 C:\Users\dajab\Desktop\project\project-full-Klimes\Project-full\Project-full\obj\Debug\net8.0\Project-full.genruntimeconfig.cache
 C:\Users\dajab\Desktop\project\project-full-Klimes\Project-full\Project-full\obj\Debug\net8.0\ref\Project-full.dll
+C:\project-full-Klimes\Project-full\Project-full\obj\Debug\net8.0\staticwebassets.build.json.cache
