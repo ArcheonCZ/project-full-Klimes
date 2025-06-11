@@ -6,9 +6,7 @@
 
 
 <h1>Seznam klientů</h1>
-@* <p>
-	<a asp-action="Create">Založ osobu</a>
-</p> *@
+
 
 <table class="table">
 	<thead>
@@ -66,7 +64,7 @@
 				<td>
 					<a class="btn btn-primary" asp-action="Edit" asp-route-id="@item.Id">Uprav údaje</a> 
 					<a class="btn btn-warning" asp-action="Details" asp-route-id="@item.Id">Detaily pojištěnce</a> 
-					<a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Smazat pojištěnce</a>
+					@* <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Smazat pojištěnce</a> *@
 				</td>
 			</tr>
 		}

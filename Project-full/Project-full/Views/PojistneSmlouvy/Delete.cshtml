@@ -12,12 +12,7 @@
     <h4>PojistnaSmlouva</h4>
     <hr />
     <dl class="row">
-      @*   <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.PojistenecId)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.PojistenecId)
-        </dd> *@
+
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.Pojisteni!.Nazev)
         </dt>
@@ -40,7 +35,7 @@
     
     <form asp-action="Delete">
         <input type="hidden" asp-for="Id" />
-        <input type="submit" value="Zrušit pojištění" class="btn btn-danger" /> |
-        <a asp-action="Index">Zpět na seznam</a>
+        <input type="submit" value="Zrušit pojištění" class="btn btn-danger" /> 
+        <a class="btn btn-warning" asp-action="Index">Zpět na seznam</a>
     </form>
 </div>

@@ -75,12 +75,14 @@ namespace Project_full.Controllers
         {
             if (id == null)
             {
+				Console.WriteLine("součástí požadavku není id");
                 return NotFound();
             }
 
             var pojisteni = await _context.Pojisteni.FindAsync(id);
             if (pojisteni == null)
             {
+				Console.WriteLine("Pojištění nenalezeno - není co editovat");
                 return NotFound();
             }
             return View(pojisteni);

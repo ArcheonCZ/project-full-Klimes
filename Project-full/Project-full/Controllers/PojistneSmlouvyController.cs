@@ -47,6 +47,7 @@ namespace Project_full.Controllers
 		}
 
 		// GET: PojistneSmlouvy/Details/5
+	
 		public async Task<IActionResult> Details(int? id)
 		{
 			if (id == null)
@@ -66,9 +67,10 @@ namespace Project_full.Controllers
 		}
 
 		// GET: PojistneSmlouvy/Create
+		[Route("PojistneSmlouvy/create")]
 		public IActionResult Create()
 		{
-			Console.WriteLine("PojistneSmlouvy/Create");
+			
 			var model = new SjednaniPojisteniViewModel
 			{
 				PojisteniOptions = pojisteniSelectList,
@@ -83,6 +85,7 @@ namespace Project_full.Controllers
 		// For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
 		[HttpPost]
 		[ValidateAntiForgeryToken]
+		[Route("PojistneSmlouvy/create")]
 		public async Task<IActionResult> Create(SjednaniPojisteniViewModel model)
 		{
 			ModelState.Remove("Nazev"); //model state mi nevaliduje pole Nazev, protoze ho pro vytvoreni pojisteni nepotrebuju

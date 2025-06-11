@@ -45,5 +45,6 @@
     </div>
 
     <button type="submit" class="btn btn-primary">Uložit změny</button>
-    <a asp-action="Index" class="btn btn-secondary">Zpět</a>
+    @* <a asp-action="Index" class="btn btn-secondary">Zpět</a> *@
+    <a asp-action="Details" asp-route-id="@Model.Id" asp-route-zobrazTlacitkoZpet="false" class="btn btn-secondary">Zpět</a>
 </form>
